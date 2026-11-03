@@ -669,3 +669,9 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 @media (max-height:700px){
   .cfhero,.rhero{padding-top:calc(var(--sat) + 16px)}
 }
+
+/* ещё плотнее: заголовок ближе к острову, без пустой зоны над кружкой */
+.cfhero,.rhero{padding-top:calc(var(--sat) + 12px)}
+@media (max-height:700px){
+  .cfhero,.rhero{padding-top:calc(var(--sat) + 10px)}
+}

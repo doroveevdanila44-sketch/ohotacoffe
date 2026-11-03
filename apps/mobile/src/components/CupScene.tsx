@@ -80,7 +80,7 @@ export function CupScene({
   }, [state]);
   return (
     <div className="stage">
-      <svg ref={svg} viewBox="0 0 360 262" role="img" aria-label={name} className={state === 'idle' ? '' : state} style={{ ['--l' as string]: color }}>
+      <svg ref={svg} viewBox="0 44 360 218" role="img" aria-label={name} className={state === 'idle' ? '' : state} style={{ ['--l' as string]: color }}>
         <path className="stm" d={`M180 0V${top}`} stroke={color} strokeWidth={8} strokeLinecap="round" fill="none" />
         <g className="cupg" style={{ transformOrigin: '180px 236px', transform: `scale(${scaleOf(ml)})` }}>
           <g className="flt">
