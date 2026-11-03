@@ -76,7 +76,9 @@ export function useIndex() {
     const addons = new Map((menu?.addons ?? []).map((a) => [a.id, a]));
     const flavors = new Map<string, string>();
     for (const b of menu?.syrupBrands ?? []) for (const f of b.flavors) flavors.set(f.id, f.title);
-    return { products, addons, flavors };
+    // Раздел меню → ключ оформления (кружка): нужен корзине, чтобы показать кружку выбранного напитка.
+    const cats = new Map((menu?.categories ?? []).map((c) => [c.id, c.presentation ?? '']));
+    return { products, addons, flavors, cats };
   }, [catalog, menu]);
 }
 

@@ -73,6 +73,8 @@ export function CupScene({
   const H = ph[2];
   const W = Math.round(H / ph[1]);
   const top = cupTop(presentation, ml);
+  // Верх кадра: чтобы самый большой размер (масштаб 1,08) и покачивание не вылезали за рамку и не налезали на заголовок.
+  const y0 = Math.max(0, Math.floor(236 - (4 + H) * 1.08 - 10));
   const svg = useRef<SVGSVGElement>(null);
   // Перезапуск анимации струи при каждом наливе.
   useEffect(() => {
@@ -80,7 +82,7 @@ export function CupScene({
   }, [state]);
   return (
     <div className="stage">
-      <svg ref={svg} viewBox="0 44 360 218" role="img" aria-label={name} className={state === 'idle' ? '' : state} style={{ ['--l' as string]: color }}>
+      <svg ref={svg} viewBox={`0 ${y0} 360 ${262 - y0}`} role="img" aria-label={name} className={state === 'idle' ? '' : state} style={{ ['--l' as string]: color }}>
         <path className="stm" d={`M180 0V${top}`} stroke={color} strokeWidth={8} strokeLinecap="round" fill="none" />
         <g className="cupg" style={{ transformOrigin: '180px 236px', transform: `scale(${scaleOf(ml)})` }}>
           <g className="flt">

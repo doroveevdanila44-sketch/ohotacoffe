@@ -33,7 +33,7 @@ export function Cart({ active }: { active: boolean }) {
   const [addrErr, setAddrErr] = useState(false);
   const [askCancel, setAskCancel] = useState(false);
 
-  const views = lines.map((l) => ({ l, v: lineView(l, idx.products, idx.addons, idx.flavors) }));
+  const views = lines.map((l) => ({ l, v: lineView(l, idx.products, idx.addons, idx.flavors, idx.cats) }));
   const sum = views.reduce((s, x) => s + x.v.unit * x.l.qty, 0);
   const freeFrom = settings?.freeDeliveryFrom ?? 250000;
   const del = checkout.mode === 'delivery';
@@ -231,7 +231,15 @@ export function Cart({ active }: { active: boolean }) {
                 <div className="box">
                   {views.map(({ l, v }) => (
                     <div className="ci" key={l.key}>
-                      {v.image && !v.color ? <img src={v.image} alt="" /> : <div className="sw" style={{ background: v.color ?? '#e7e4ea' }} />}
+                      {v.mug ? (
+                        <div className="mug" style={{ ['--c' as string]: v.color ?? '#b9825a' }}>
+                          <img src={v.mug} alt="" />
+                        </div>
+                      ) : v.image ? (
+                        <img src={v.image} alt="" />
+                      ) : (
+                        <div className="sw" style={{ background: v.color ?? '#e7e4ea' }} />
+                      )}
                       <div className="n">
                         {v.title}
                         <small>

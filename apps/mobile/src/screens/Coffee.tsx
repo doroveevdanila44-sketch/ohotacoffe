@@ -120,7 +120,7 @@ export function Coffee({ active }: { active: boolean }) {
     <section className={`screen${active ? ' active' : ''}`} id="s-coffee">
       <div className="mach cf">
         <div className="cfhero">
-          <h1 className="cft">
+          <h1 className={`cft${(WORD[cat?.presentation ?? ''] ?? 'кофе').length > 5 ? ' long' : ''}`}>
             Самый вкусный <span>{WORD[cat?.presentation ?? ''] ?? 'кофе'}</span>
             <br />
             <span>через 15 минут</span>
