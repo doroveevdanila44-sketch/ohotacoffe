@@ -125,7 +125,10 @@ export function SystemBar() {
   else if (tab === 'machine') color = step === 'form' ? (over ? GREEN : VIOLET) : GREEN;
 
   useLayoutEffect(() => {
+    // Safari красит верх экрана по theme-color и по фону html/body, поэтому задаём все три.
     document.querySelector('meta[name="theme-color"]')?.setAttribute('content', color);
+    document.documentElement.style.backgroundColor = color;
+    document.body.style.backgroundColor = color;
   }, [color]);
   // Цвет задаётся прямо в разметке: он меняется в том же кадре, что и экран под ним.
   return <div className="sysbar" style={{ background: color }} aria-hidden="true" />;
