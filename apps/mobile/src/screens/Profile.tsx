@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { ORDER_STATUS_TITLE, type Order, type User } from '@kbs/shared';
 import { Icon } from '../components/Icons';
-import { Confirm, Sheet, Spinner } from '../components/common';
+import { Confirm, Info, Sheet, Spinner } from '../components/common';
 import { api } from '../lib/api';
 import { dateTime, formatPhone, money } from '../lib/format';
 import { openUrl, telHref } from '../lib/native';
@@ -25,6 +25,7 @@ export function Profile({ active }: { active: boolean }) {
   const { favs, toggleFav } = useCart();
   const { open, setTab } = useUi();
   const [ask, setAsk] = useState<'logout' | 'delete' | null>(null);
+  const [bonusInfo, setBonusInfo] = useState(false);
   const [allOrders, setAllOrders] = useState(false);
   const [busy, setBusy] = useState(false);
 
@@ -62,7 +63,11 @@ export function Profile({ active }: { active: boolean }) {
                 const have = Math.max(0, Math.min(total, Math.floor(token ? me.data?.bonus ?? 0 : 0)));
                 return (
                   <>
-                    <h3>Бонусная карта</h3>
+                    <button className="bon-i" aria-label="Подробнее о бесплатном кофе" onClick={() => setBonusInfo(true)}>
+                      <Icon name="info" />
+                    </button>
+                    <h3>Бонусная программа</h3>
+                    <p className="bon-sub">Каждый шестой кофе в подарок</p>
                     <div className="cups" role="img" aria-label={`Накоплено ${have} из ${total} стаканчиков`}>
                       {Array.from({ length: total }, (_, i) => (
                         <div key={i} className={`cup${i < have ? ' on' : ''}${i === total - 1 ? ' last' : ''}`}>
@@ -73,12 +78,11 @@ export function Profile({ active }: { active: boolean }) {
                     </div>
                     <p className="bonus-txt">
                       {!token
-                        ? 'Войдите и копите: 6-й кофе бесплатно'
+                        ? 'Войдите, чтобы копить стаканчики'
                         : have >= total
-                        ? 'Следующий кофе бесплатно. Заберите его на любой точке'
-                        : `Накоплено ${have} из ${total}. Ещё ${total - have} и ${total}-й кофе бесплатно`}
+                        ? 'Накоплено 6 из 6. Ваш кофе бесплатный!'
+                        : `Накоплено ${have} из ${total}`}
                     </p>
-                    <span>Бесплатный кофе при самовывозе с любой точки</span>
                   </>
                 );
               })()}
@@ -197,6 +201,9 @@ export function Profile({ active }: { active: boolean }) {
           ) : null}
         </div>
       </div>
+      {bonusInfo ? (
+        <Info title="Бесплатный кофе" text="Каждый шестой кофе мы дарим. Забрать подарок можно самостоятельно в любой из наших офлайн-точек: в магазине или в чайной лавке и кофейне." onClose={() => setBonusInfo(false)} />
+      ) : null}
       {ask === 'logout' ? <Confirm title="Выйти из аккаунта?" text="Корзина и избранное останутся на телефоне." ok="Выйти" onOk={doLogout} onCancel={() => setAsk(null)} /> : null}
       {ask === 'delete' ? (
         <Confirm
@@ -275,11 +282,13 @@ export function EditProfileSheet({ open }: { open: boolean }) {
   return (
     <Sheet open={open} onClose={() => close('editProfile')}>
       <h3>Мои данные</h3>
+      <label className="lb">Телефон</label>
+      <input className="fi" value={me ? formatPhone(me.phone) : ''} readOnly disabled />
       <label className="lb">Имя</label>
       <input className="fi" value={name} maxLength={80} autoComplete="given-name" onChange={(e) => setName(e.target.value)} />
       <label className="lb">Город</label>
       <input className="fi" value={city} maxLength={80} placeholder="Петропавловск-Камчатский" onChange={(e) => setCity(e.target.value)} />
-      <button className="bonus-txt" disabled={busy} onClick={save}>
+      <button className="bt" disabled={busy} onClick={save}>
         {busy ? <Spinner /> : 'Сохранить'}
       </button>
     </Sheet>

@@ -758,3 +758,13 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 .fv button .ic{fill:#ef3340;stroke:#ef3340}
 .fv .fvo{flex:1;min-width:0;display:flex;align-items:center;gap:12px;cursor:pointer;-webkit-tap-highlight-color:transparent}
 .fv .fvo:active{opacity:.6}
+
+/* Бонусная программа: заголовок, подпись и значок информации */
+.box.bon{position:relative}
+.bon .bon-i{position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.18);color:#fff;-webkit-tap-highlight-color:transparent}
+.bon .bon-i .ic{width:20px;height:20px;stroke-width:1.8}
+.bon .bon-i:active{background:rgba(255,255,255,.3)}
+.bon h3{margin:0}
+.bon .bon-sub{margin:4px 0 0;font-size:14px;color:rgba(255,255,255,.85)}
+.bon .cups{padding-top:6px}
+.fi:disabled{opacity:1;color:var(--muted);background:rgba(0,0,0,.04);-webkit-text-fill-color:var(--muted)}

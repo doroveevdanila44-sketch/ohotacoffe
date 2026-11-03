@@ -18,11 +18,12 @@ export function IconSprite() {
       <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" /></symbol>
       <symbol id="i-x" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" /></symbol>
       <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" /></symbol>
+      <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M12 11v5.2" /><circle cx="12" cy="7.8" r=".6" /></symbol>
     </svg>
   );
 }
 
-export type IconName = 'home' | 'grid' | 'bag' | 'heart' | 'user' | 'mach' | 'chev' | 'minus' | 'cup' | 'bell' | 'gear' | 'search' | 'plus' | 'check' | 'x' | 'phone';
+export type IconName = 'home' | 'grid' | 'bag' | 'heart' | 'user' | 'mach' | 'chev' | 'minus' | 'cup' | 'bell' | 'gear' | 'search' | 'plus' | 'check' | 'x' | 'phone' | 'info';
 
 export function Icon({ name, className }: { name: IconName; className?: string }) {
   return (

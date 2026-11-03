@@ -135,6 +135,23 @@ export function Confirm({
   );
 }
 
+export function Info({ title, text, onClose }: { title: string; text: string; onClose: () => void }) {
+  return createPortal(
+    <div className="dlg" onClick={onClose}>
+      <div className="box" onClick={(e) => e.stopPropagation()} role="dialog">
+        <h3>{title}</h3>
+        <p>{text}</p>
+        <div className="row">
+          <button className="bt" onClick={onClose}>
+            Понятно
+          </button>
+        </div>
+      </div>
+    </div>,
+    appRoot(),
+  );
+}
+
 /** Общий «тик» для смены строк под ценой: один таймер на всё приложение. */
 const subs = new Set<(n: number) => void>();
 let ticker: ReturnType<typeof setInterval> | null = null;
