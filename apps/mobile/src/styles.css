@@ -743,11 +743,12 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 .box.bon{overflow:hidden}
 .bon .cups{display:grid;grid-template-columns:repeat(5,1fr) 1.7fr;gap:6px;align-items:end;padding-top:14px}
 .bon .cups .cup{position:relative;display:flex;align-items:flex-end;justify-content:center}
-.bon .cups .cup img{position:relative;width:100%;height:auto;display:block;opacity:.5;filter:grayscale(1) brightness(1.25);transition:none}
+.bon .cups .cup img{position:relative;width:100%;height:auto;display:block;opacity:1;filter:saturate(.55) brightness(.82);transition:none}
 .bon .cups .cup.on img{opacity:1;filter:none}
 .bon .cups .cup.last img{width:100%}
 .bon .cups .cup.last.on img{filter:drop-shadow(0 0 10px rgba(255,255,255,.45))}
-.bon .cups .rays{margin:0;position:absolute;left:50%;top:48%;width:190%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;
-  background:repeating-conic-gradient(from 0deg,rgba(255,255,255,.55) 0 2.2deg,transparent 2.2deg 15deg);
-  -webkit-mask-image:radial-gradient(circle,transparent 0 30%,#000 31% 62%,transparent 70%);mask-image:radial-gradient(circle,transparent 0 30%,#000 31% 62%,transparent 70%);opacity:.5}
+.bon .cups .rays{margin:0;position:absolute;left:50%;top:46%;width:190%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;
+  background:repeating-conic-gradient(from 4deg,#fff 0 1.1deg,transparent 1.1deg 10deg);
+  -webkit-mask-image:radial-gradient(circle,transparent 0 40%,#000 41% 52%,transparent 53% 56%,#000 57% 66%,transparent 67%);
+  mask-image:radial-gradient(circle,transparent 0 40%,#000 41% 52%,transparent 53% 56%,#000 57% 66%,transparent 67%);opacity:.55}
 .bon .cups .cup.last.on .rays{opacity:1}

@@ -8,6 +8,7 @@ import { preloadCups } from './lib/preload';
 import { initNative } from './native';
 import { useCart } from './store/cart';
 import { useSession } from './store/session';
+import { DEMO, demoLogin } from './lib/api';
 import './styles.css';
 
 async function boot() {
@@ -16,6 +17,7 @@ async function boot() {
   // Сначала поднимаем сохранённые данные: сессию, корзину и последний каталог.
   await Promise.all([useSession.persist.rehydrate(), useCart.persist.rehydrate(), hydrateCache()]);
   await initNative();
+  if (DEMO && !useSession.getState().token) await demoLogin().catch(() => undefined);
   createRoot(document.getElementById('root')!).render(
     <StrictMode>
       <QueryClientProvider client={queryClient}>

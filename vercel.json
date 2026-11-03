@@ -2,7 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "installCommand": "npm ci",
-  "buildCommand": "node apps/api/scripts/build-vercel.mjs && VITE_API_URL=/api npm run build -w @kbs/mobile",
+  "buildCommand": "node apps/api/scripts/build-vercel.mjs && VITE_DEMO=1 VITE_API_URL=/api npm run build -w @kbs/mobile",
   "outputDirectory": "apps/mobile/dist",
   "functions": {
     "api/index.mjs": {
