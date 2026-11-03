@@ -19,7 +19,7 @@ export interface DbHandle {
 const here = dirname(fileURLToPath(import.meta.url));
 /** Папка с SQL-миграциями drizzle. Ищем рядом с исходниками и рядом со сборкой. */
 export const migrationsFolder =
-  [resolve(here, '../../drizzle'), resolve(here, '../drizzle'), resolve(process.cwd(), 'drizzle')].find((p) =>
+  [resolve(here, '../../drizzle'), resolve(here, '../drizzle'), resolve(process.cwd(), 'drizzle'), resolve(process.cwd(), 'apps/api/drizzle')].find((p) =>
     existsSync(p),
   ) ?? resolve(process.cwd(), 'drizzle');
 

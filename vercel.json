@@ -1,0 +1,14 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "npm ci",
+  "buildCommand": "node apps/api/scripts/build-vercel.mjs && VITE_API_URL=/api npm run build -w @kbs/mobile",
+  "outputDirectory": "apps/mobile/dist",
+  "functions": {
+    "api/index.mjs": {
+      "maxDuration": 30,
+      "includeFiles": "apps/api/{config,drizzle}/**"
+    }
+  },
+  "rewrites": [{ "source": "/api/:path*", "destination": "/api/index?path=:path*" }]
+}

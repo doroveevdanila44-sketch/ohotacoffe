@@ -21,3 +21,7 @@ apps/mobile/android/keystore.properties
 *.jks
 *.keystore
 *.p8
+
+# демо для Vercel (генерируется при сборке)
+/api/
+apps/mobile/public/media/
