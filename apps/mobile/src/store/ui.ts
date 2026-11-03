@@ -20,6 +20,8 @@ interface Ui {
   afterLogin: 'checkout' | 'repair' | null;
   /** Открыть заказ из ссылки (возврат из оплаты, push). */
   focusOrderId: string | null;
+  repairStep: 'form' | 'est' | 'track';
+  setRepairStep: (s: 'form' | 'est' | 'track') => void;
   setTab: (t: Tab) => void;
   open: (o: Overlay) => void;
   close: (type?: Overlay['type']) => void;
@@ -37,6 +39,8 @@ export const useUi = create<Ui>()((set) => ({
   toastNonce: 0,
   afterLogin: null,
   focusOrderId: null,
+  repairStep: 'form',
+  setRepairStep: (repairStep) => set({ repairStep }),
   setTab: (tab) => set((s) => ({ tab, tabNonce: s.tabNonce + 1, overlays: [] })),
   open: (o) => set((s) => ({ overlays: [...s.overlays.filter((x) => x.type !== o.type), o] })),
   close: (type) =>

@@ -84,3 +84,21 @@ export function OfflineBadge() {
   }, []);
   return off ? <div className="offline">Нет интернета</div> : null;
 }
+
+const GREEN = '#8bcb45';
+const VIOLET = '#7b4fd6';
+const GREY = '#f3f3f5';
+
+/** Цвет верхней части экрана (у динамика и острова) совпадает с цветом шапки текущего экрана. */
+export function SystemBar() {
+  const tab = useUi((s) => s.tab);
+  const step = useUi((s) => s.repairStep);
+  const color = tab === 'coffee' ? GREEN : tab === 'machine' ? (step === 'form' ? VIOLET : GREEN) : GREY;
+  useEffect(() => {
+    document.documentElement.style.setProperty('--top', color);
+    document.documentElement.style.backgroundColor = color;
+    document.body.style.backgroundColor = color;
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', color);
+  }, [color]);
+  return <div className="sysbar" aria-hidden="true" />;
+}

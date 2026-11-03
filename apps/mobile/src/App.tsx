@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { IconSprite } from './components/Icons';
-import { OfflineBadge, Splash, TabBar } from './components/Chrome';
+import { OfflineBadge, Splash, SystemBar, TabBar } from './components/Chrome';
 import { Toast } from './components/common';
 import { useCatalog, useMenu, useSettings } from './lib/queries';
 import { hideSplash } from './native';
@@ -48,6 +48,7 @@ export function App() {
       <LoginPanel open={!!login} reason={login?.reason} />
       <EditProfileSheet open={!!find('editProfile')} />
 
+      <SystemBar />
       <TabBar />
       <Toast />
       <OfflineBadge />

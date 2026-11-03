@@ -32,6 +32,8 @@ export function RepairScreen({ active }: { active: boolean }) {
   const [err, setErr] = useState<string | null>(null);
   const [reqId, setReqId] = useState(uuid);
   const { open, afterLogin, setAfterLogin } = useUi();
+  const setRepairStep = useUi((s) => s.setRepairStep);
+  useEffect(() => setRepairStep(step), [step, setRepairStep]);
 
   // Если есть машина в ремонте, сразу показываем её ход.
   useEffect(() => {
