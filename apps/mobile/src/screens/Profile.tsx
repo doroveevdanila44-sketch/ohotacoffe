@@ -55,6 +55,35 @@ export function Profile({ active }: { active: boolean }) {
     }
   };
 
+  const bonusCard = (
+            <div className="box bon">
+              {(() => {
+                const total = 6;
+                const have = Math.max(0, Math.min(total, Math.floor(token ? me.data?.bonus ?? 0 : 0)));
+                return (
+                  <>
+                    <h3>Бонусная карта</h3>
+                    <div className="cups" role="img" aria-label={`Накоплено ${have} из ${total} стаканчиков`}>
+                      {Array.from({ length: total }, (_, i) => (
+                        <i key={i} className={i < have ? 'on' : ''}>
+                          {i === total - 1 ? <em>6</em> : null}
+                        </i>
+                      ))}
+                    </div>
+                    <p className="bonus-txt">
+                      {!token
+                        ? 'Войдите и копите: 6-й кофе бесплатно'
+                        : have >= total
+                        ? 'Следующий кофе бесплатно. Заберите его на любой точке'
+                        : `Накоплено ${have} из ${total}. Ещё ${total - have} и ${total}-й кофе бесплатно`}
+                    </p>
+                    <span>Бесплатный кофе при самовывозе с любой точки</span>
+                  </>
+                );
+              })()}
+            </div>
+  );
+
   return (
     <section className={`screen${active ? ' active' : ''}`} id="s-profile">
       <div className="mach">
@@ -67,11 +96,13 @@ export function Profile({ active }: { active: boolean }) {
             </div>
             <div className="mname">Войдите по номеру телефона</div>
             <div className="msub">Чтобы оформлять заказы, следить за ремонтом и копить бонусы</div>
-            <button className="bonus-txt" onClick={() => open({ type: 'login' })}>
+            <button className="bt" onClick={() => open({ type: 'login' })}>
               Войти
             </button>
           </div>
-        ) : (
+        ) : null}
+        {!token ? bonusCard : null}
+        {token ? (
           <>
             <button className="box pf" style={{ width: '100%', textAlign: 'left' }} onClick={() => open({ type: 'editProfile' })}>
               <div className="av">{(me.data?.name ?? '?')[0]?.toUpperCase()}</div>
@@ -102,32 +133,9 @@ export function Profile({ active }: { active: boolean }) {
                 ) : null}
               </div>
             ) : null}
-            <div className="box bon">
-              {(() => {
-                const total = 6;
-                const have = Math.max(0, Math.min(total, Math.floor(me.data?.bonus ?? 0)));
-                return (
-                  <>
-                    <h3>Бонусная карта</h3>
-                    <div className="cups" role="img" aria-label={`Накоплено ${have} из ${total} стаканчиков`}>
-                      {Array.from({ length: total }, (_, i) => (
-                        <i key={i} className={i < have ? 'on' : ''}>
-                          {i === total - 1 ? <em>6</em> : null}
-                        </i>
-                      ))}
-                    </div>
-                    <p className="bonus-txt">
-                      {have >= total
-                        ? 'Следующий кофе бесплатно. Заберите его на любой точке'
-                        : `Накоплено ${have} из ${total}. Ещё ${total - have} и ${total}-й кофе бесплатно`}
-                    </p>
-                    <span>Бесплатный кофе при самовывозе с любой точки</span>
-                  </>
-                );
-              })()}
-            </div>
+            {bonusCard}
           </>
-        )}
+        ) : null}
         <div className="box">
           <h3>Избранное</h3>
           {favItems.length ? (
