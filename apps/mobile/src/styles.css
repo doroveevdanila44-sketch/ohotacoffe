@@ -4,12 +4,12 @@
   --font:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',Roboto,system-ui,sans-serif;
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{height:100%;margin:0}
+html,body{height:var(--app-h,100%);margin:0;overflow:hidden}
 body{background:var(--bg);overscroll-behavior:none;font-family:var(--font);color:var(--ink);display:flex;justify-content:center;align-items:stretch;-webkit-font-smoothing:antialiased}
 button{font:inherit;color:inherit;border:0;background:none;padding:0;cursor:pointer}
 .ic{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;display:block}
 
-.app{position:relative;width:100%;height:100dvh;background:var(--bg);overflow:hidden;isolation:isolate}
+.app{position:relative;width:100%;height:var(--app-h,100dvh);background:var(--bg);overflow:hidden;isolation:isolate}
 
 /* glass */
 .glass{
@@ -520,7 +520,7 @@ svg.stage-in .mach{animation:cupin .5s both}
 @keyframes load{to{width:100%}}
 
 /* ===== боевая версия: дополнения ===== */
-html,body,#root{height:100%}
+html,body,#root{height:var(--app-h,100%)}
 #root{width:100%}
 body{user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;padding-left:var(--sal);padding-right:var(--sar)}
 input,textarea{user-select:text;-webkit-user-select:text}
@@ -612,7 +612,7 @@ body.kb .tabbar{display:none}
 .toast{top:calc(var(--sat) + 10px)}
 
 /* заставка закрывает весь экран, включая зону у острова, и красит верх браузера */
-#splash{position:fixed}
+#splash{position:fixed;inset:auto;top:0;left:0;right:0;height:var(--app-h,100%)}
 
 /* экраны переключаются мгновенно, без проявления: цвет верхней полосы меняется в том же кадре */
 .screen{transition:none}
