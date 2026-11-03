@@ -72600,6 +72600,10 @@ var mock_catalog_default = {
         {
           ref: "ch-menu-classic-01-2",
           title: "350 \u043C\u043B"
+        },
+        {
+          ref: "ch-menu-classic-01-3",
+          title: "450 \u043C\u043B"
         }
       ]
     },
@@ -72615,6 +72619,10 @@ var mock_catalog_default = {
         {
           ref: "ch-menu-classic-02-1",
           title: "350 \u043C\u043B"
+        },
+        {
+          ref: "ch-menu-classic-02-2",
+          title: "450 \u043C\u043B"
         }
       ]
     },
@@ -72630,6 +72638,10 @@ var mock_catalog_default = {
         {
           ref: "ch-menu-classic-03-1",
           title: "350 \u043C\u043B"
+        },
+        {
+          ref: "ch-menu-classic-03-2",
+          title: "450 \u043C\u043B"
         }
       ]
     },
@@ -72641,7 +72653,12 @@ var mock_catalog_default = {
       groupRef: "g-menu-classic",
       description: null,
       unit: "\u0448\u0442",
-      characteristics: []
+      characteristics: [
+        {
+          ref: "ch-menu-classic-04-1",
+          title: "250 \u043C\u043B"
+        }
+      ]
     },
     {
       ref: "it-menu-classic-05",
@@ -72651,7 +72668,12 @@ var mock_catalog_default = {
       groupRef: "g-menu-classic",
       description: null,
       unit: "\u0448\u0442",
-      characteristics: []
+      characteristics: [
+        {
+          ref: "ch-menu-classic-05-1",
+          title: "18 \u0433"
+        }
+      ]
     },
     {
       ref: "it-menu-classic-06",
@@ -72661,7 +72683,12 @@ var mock_catalog_default = {
       groupRef: "g-menu-classic",
       description: null,
       unit: "\u0448\u0442",
-      characteristics: []
+      characteristics: [
+        {
+          ref: "ch-menu-classic-06-1",
+          title: "35 \u0433"
+        }
+      ]
     },
     {
       ref: "it-menu-classic-07",
@@ -72679,6 +72706,10 @@ var mock_catalog_default = {
         {
           ref: "ch-menu-classic-07-2",
           title: "350 \u043C\u043B"
+        },
+        {
+          ref: "ch-menu-classic-07-3",
+          title: "450 \u043C\u043B"
         }
       ]
     },
@@ -72694,6 +72725,10 @@ var mock_catalog_default = {
         {
           ref: "ch-menu-classic-08-1",
           title: "350 \u043C\u043B"
+        },
+        {
+          ref: "ch-menu-classic-08-2",
+          title: "450 \u043C\u043B"
         }
       ]
     },
@@ -72713,6 +72748,10 @@ var mock_catalog_default = {
         {
           ref: "ch-menu-classic-09-2",
           title: "350 \u043C\u043B"
+        },
+        {
+          ref: "ch-menu-classic-09-3",
+          title: "450 \u043C\u043B"
         }
       ]
     },
@@ -72728,6 +72767,10 @@ var mock_catalog_default = {
         {
           ref: "ch-menu-classic-10-1",
           title: "350 \u043C\u043B"
+        },
+        {
+          ref: "ch-menu-classic-10-2",
+          title: "450 \u043C\u043B"
         }
       ]
     },
@@ -72743,6 +72786,10 @@ var mock_catalog_default = {
         {
           ref: "ch-menu-classic-11-1",
           title: "350 \u043C\u043B"
+        },
+        {
+          ref: "ch-menu-classic-11-2",
+          title: "450 \u043C\u043B"
         }
       ]
     },
@@ -72758,6 +72805,10 @@ var mock_catalog_default = {
         {
           ref: "ch-menu-classic-12-1",
           title: "350 \u043C\u043B"
+        },
+        {
+          ref: "ch-menu-classic-12-2",
+          title: "450 \u043C\u043B"
         }
       ]
     },
@@ -72773,6 +72824,10 @@ var mock_catalog_default = {
         {
           ref: "ch-menu-classic-13-1",
           title: "350 \u043C\u043B"
+        },
+        {
+          ref: "ch-menu-classic-13-2",
+          title: "450 \u043C\u043B"
         }
       ]
     },
@@ -72788,6 +72843,10 @@ var mock_catalog_default = {
         {
           ref: "ch-menu-author-01-1",
           title: "350 \u043C\u043B"
+        },
+        {
+          ref: "ch-menu-author-01-2",
+          title: "450 \u043C\u043B"
         }
       ]
     },
@@ -72803,6 +72862,10 @@ var mock_catalog_default = {
         {
           ref: "ch-menu-author-02-1",
           title: "350 \u043C\u043B"
+        },
+        {
+          ref: "ch-menu-author-02-2",
+          title: "450 \u043C\u043B"
         }
       ]
     },
@@ -72818,6 +72881,10 @@ var mock_catalog_default = {
         {
           ref: "ch-menu-author-03-1",
           title: "350 \u043C\u043B"
+        },
+        {
+          ref: "ch-menu-author-03-2",
+          title: "450 \u043C\u043B"
         }
       ]
     },
@@ -72833,6 +72900,10 @@ var mock_catalog_default = {
         {
           ref: "ch-menu-author-04-1",
           title: "350 \u043C\u043B"
+        },
+        {
+          ref: "ch-menu-author-04-2",
+          title: "450 \u043C\u043B"
         }
       ]
     },
@@ -72848,6 +72919,10 @@ var mock_catalog_default = {
         {
           ref: "ch-menu-author-05-1",
           title: "350 \u043C\u043B"
+        },
+        {
+          ref: "ch-menu-author-05-2",
+          title: "450 \u043C\u043B"
         }
       ]
     },
@@ -72859,7 +72934,12 @@ var mock_catalog_default = {
       groupRef: "g-menu-author",
       description: null,
       unit: "\u0448\u0442",
-      characteristics: []
+      characteristics: [
+        {
+          ref: "ch-menu-author-06-1",
+          title: "350 \u043C\u043B"
+        }
+      ]
     },
     {
       ref: "it-menu-cold-01",
@@ -72869,7 +72949,12 @@ var mock_catalog_default = {
       groupRef: "g-menu-cold",
       description: null,
       unit: "\u0448\u0442",
-      characteristics: []
+      characteristics: [
+        {
+          ref: "ch-menu-cold-01-1",
+          title: "450 \u043C\u043B"
+        }
+      ]
     },
     {
       ref: "it-menu-cold-02",
@@ -72879,7 +72964,12 @@ var mock_catalog_default = {
       groupRef: "g-menu-cold",
       description: null,
       unit: "\u0448\u0442",
-      characteristics: []
+      characteristics: [
+        {
+          ref: "ch-menu-cold-02-1",
+          title: "450 \u043C\u043B"
+        }
+      ]
     },
     {
       ref: "it-menu-cold-03",
@@ -72889,7 +72979,12 @@ var mock_catalog_default = {
       groupRef: "g-menu-cold",
       description: null,
       unit: "\u0448\u0442",
-      characteristics: []
+      characteristics: [
+        {
+          ref: "ch-menu-cold-03-1",
+          title: "450 \u043C\u043B"
+        }
+      ]
     },
     {
       ref: "it-menu-cold-04",
@@ -72899,7 +72994,12 @@ var mock_catalog_default = {
       groupRef: "g-menu-cold",
       description: null,
       unit: "\u0448\u0442",
-      characteristics: []
+      characteristics: [
+        {
+          ref: "ch-menu-cold-04-1",
+          title: "450 \u043C\u043B"
+        }
+      ]
     },
     {
       ref: "it-menu-cold-05",
@@ -72909,7 +73009,12 @@ var mock_catalog_default = {
       groupRef: "g-menu-cold",
       description: null,
       unit: "\u0448\u0442",
-      characteristics: []
+      characteristics: [
+        {
+          ref: "ch-menu-cold-05-1",
+          title: "450 \u043C\u043B"
+        }
+      ]
     },
     {
       ref: "it-menu-cold-06",
@@ -72919,7 +73024,12 @@ var mock_catalog_default = {
       groupRef: "g-menu-cold",
       description: null,
       unit: "\u0448\u0442",
-      characteristics: []
+      characteristics: [
+        {
+          ref: "ch-menu-cold-06-1",
+          title: "450 \u043C\u043B"
+        }
+      ]
     },
     {
       ref: "it-menu-cold-07",
@@ -72929,7 +73039,12 @@ var mock_catalog_default = {
       groupRef: "g-menu-cold",
       description: null,
       unit: "\u0448\u0442",
-      characteristics: []
+      characteristics: [
+        {
+          ref: "ch-menu-cold-07-1",
+          title: "450 \u043C\u043B"
+        }
+      ]
     },
     {
       ref: "it-menu-cold-08",
@@ -72939,7 +73054,12 @@ var mock_catalog_default = {
       groupRef: "g-menu-cold",
       description: null,
       unit: "\u0448\u0442",
-      characteristics: []
+      characteristics: [
+        {
+          ref: "ch-menu-cold-08-1",
+          title: "450 \u043C\u043B"
+        }
+      ]
     },
     {
       ref: "it-menu-cold-09",
@@ -72949,7 +73069,12 @@ var mock_catalog_default = {
       groupRef: "g-menu-cold",
       description: null,
       unit: "\u0448\u0442",
-      characteristics: []
+      characteristics: [
+        {
+          ref: "ch-menu-cold-09-1",
+          title: "450 \u043C\u043B"
+        }
+      ]
     },
     {
       ref: "it-menu-cold-10",
@@ -72959,7 +73084,12 @@ var mock_catalog_default = {
       groupRef: "g-menu-cold",
       description: null,
       unit: "\u0448\u0442",
-      characteristics: []
+      characteristics: [
+        {
+          ref: "ch-menu-cold-10-1",
+          title: "450 \u043C\u043B"
+        }
+      ]
     },
     {
       ref: "it-menu-tea-01",
@@ -72973,6 +73103,10 @@ var mock_catalog_default = {
         {
           ref: "ch-menu-tea-01-1",
           title: "350 \u043C\u043B"
+        },
+        {
+          ref: "ch-menu-tea-01-2",
+          title: "450 \u043C\u043B"
         }
       ]
     },
@@ -72988,6 +73122,10 @@ var mock_catalog_default = {
         {
           ref: "ch-menu-tea-02-1",
           title: "350 \u043C\u043B"
+        },
+        {
+          ref: "ch-menu-tea-02-2",
+          title: "450 \u043C\u043B"
         }
       ]
     },
@@ -73003,6 +73141,10 @@ var mock_catalog_default = {
         {
           ref: "ch-menu-tea-03-1",
           title: "350 \u043C\u043B"
+        },
+        {
+          ref: "ch-menu-tea-03-2",
+          title: "450 \u043C\u043B"
         }
       ]
     },
@@ -73018,6 +73160,10 @@ var mock_catalog_default = {
         {
           ref: "ch-menu-tea-04-1",
           title: "350 \u043C\u043B"
+        },
+        {
+          ref: "ch-menu-tea-04-2",
+          title: "450 \u043C\u043B"
         }
       ]
     },
@@ -73033,6 +73179,10 @@ var mock_catalog_default = {
         {
           ref: "ch-menu-tea-05-1",
           title: "350 \u043C\u043B"
+        },
+        {
+          ref: "ch-menu-tea-05-2",
+          title: "450 \u043C\u043B"
         }
       ]
     },
@@ -73048,6 +73198,10 @@ var mock_catalog_default = {
         {
           ref: "ch-menu-tea-06-1",
           title: "350 \u043C\u043B"
+        },
+        {
+          ref: "ch-menu-tea-06-2",
+          title: "450 \u043C\u043B"
         }
       ]
     },
@@ -73059,7 +73213,12 @@ var mock_catalog_default = {
       groupRef: "g-menu-tea",
       description: null,
       unit: "\u0448\u0442",
-      characteristics: []
+      characteristics: [
+        {
+          ref: "ch-menu-tea-07-1",
+          title: "450 \u043C\u043B"
+        }
+      ]
     },
     {
       ref: "it-menu-lemonade-01",
@@ -73069,7 +73228,12 @@ var mock_catalog_default = {
       groupRef: "g-menu-lemonade",
       description: null,
       unit: "\u0448\u0442",
-      characteristics: []
+      characteristics: [
+        {
+          ref: "ch-menu-lemonade-01-1",
+          title: "450 \u043C\u043B"
+        }
+      ]
     },
     {
       ref: "it-menu-lemonade-02",
@@ -73079,7 +73243,12 @@ var mock_catalog_default = {
       groupRef: "g-menu-lemonade",
       description: null,
       unit: "\u0448\u0442",
-      characteristics: []
+      characteristics: [
+        {
+          ref: "ch-menu-lemonade-02-1",
+          title: "450 \u043C\u043B"
+        }
+      ]
     },
     {
       ref: "it-menu-lemonade-03",
@@ -73089,7 +73258,12 @@ var mock_catalog_default = {
       groupRef: "g-menu-lemonade",
       description: null,
       unit: "\u0448\u0442",
-      characteristics: []
+      characteristics: [
+        {
+          ref: "ch-menu-lemonade-03-1",
+          title: "450 \u043C\u043B"
+        }
+      ]
     },
     {
       ref: "it-menu-lemonade-04",
@@ -73099,7 +73273,12 @@ var mock_catalog_default = {
       groupRef: "g-menu-lemonade",
       description: null,
       unit: "\u0448\u0442",
-      characteristics: []
+      characteristics: [
+        {
+          ref: "ch-menu-lemonade-04-1",
+          title: "450 \u043C\u043B"
+        }
+      ]
     },
     {
       ref: "it-menu-lemonade-05",
@@ -73109,7 +73288,12 @@ var mock_catalog_default = {
       groupRef: "g-menu-lemonade",
       description: null,
       unit: "\u0448\u0442",
-      characteristics: []
+      characteristics: [
+        {
+          ref: "ch-menu-lemonade-05-1",
+          title: "450 \u043C\u043B"
+        }
+      ]
     },
     {
       ref: "it-add-sugar",
@@ -73327,126 +73511,6 @@ var mock_catalog_default = {
       price: 26
     },
     {
-      itemRef: "it-menu-classic-01",
-      charRef: "ch-menu-classic-01-1",
-      price: 170
-    },
-    {
-      itemRef: "it-menu-classic-01",
-      charRef: "ch-menu-classic-01-2",
-      price: 200
-    },
-    {
-      itemRef: "it-menu-classic-02",
-      charRef: "ch-menu-classic-02-1",
-      price: 220
-    },
-    {
-      itemRef: "it-menu-classic-03",
-      charRef: "ch-menu-classic-03-1",
-      price: 255
-    },
-    {
-      itemRef: "it-menu-classic-07",
-      charRef: "ch-menu-classic-07-1",
-      price: 140
-    },
-    {
-      itemRef: "it-menu-classic-07",
-      charRef: "ch-menu-classic-07-2",
-      price: 160
-    },
-    {
-      itemRef: "it-menu-classic-08",
-      charRef: "ch-menu-classic-08-1",
-      price: 240
-    },
-    {
-      itemRef: "it-menu-classic-09",
-      charRef: "ch-menu-classic-09-1",
-      price: 140
-    },
-    {
-      itemRef: "it-menu-classic-09",
-      charRef: "ch-menu-classic-09-2",
-      price: 160
-    },
-    {
-      itemRef: "it-menu-classic-10",
-      charRef: "ch-menu-classic-10-1",
-      price: 190
-    },
-    {
-      itemRef: "it-menu-classic-11",
-      charRef: "ch-menu-classic-11-1",
-      price: 210
-    },
-    {
-      itemRef: "it-menu-classic-12",
-      charRef: "ch-menu-classic-12-1",
-      price: 190
-    },
-    {
-      itemRef: "it-menu-classic-13",
-      charRef: "ch-menu-classic-13-1",
-      price: 240
-    },
-    {
-      itemRef: "it-menu-author-01",
-      charRef: "ch-menu-author-01-1",
-      price: 280
-    },
-    {
-      itemRef: "it-menu-author-02",
-      charRef: "ch-menu-author-02-1",
-      price: 280
-    },
-    {
-      itemRef: "it-menu-author-03",
-      charRef: "ch-menu-author-03-1",
-      price: 280
-    },
-    {
-      itemRef: "it-menu-author-04",
-      charRef: "ch-menu-author-04-1",
-      price: 280
-    },
-    {
-      itemRef: "it-menu-author-05",
-      charRef: "ch-menu-author-05-1",
-      price: 240
-    },
-    {
-      itemRef: "it-menu-tea-01",
-      charRef: "ch-menu-tea-01-1",
-      price: 190
-    },
-    {
-      itemRef: "it-menu-tea-02",
-      charRef: "ch-menu-tea-02-1",
-      price: 190
-    },
-    {
-      itemRef: "it-menu-tea-03",
-      charRef: "ch-menu-tea-03-1",
-      price: 190
-    },
-    {
-      itemRef: "it-menu-tea-04",
-      charRef: "ch-menu-tea-04-1",
-      price: 190
-    },
-    {
-      itemRef: "it-menu-tea-05",
-      charRef: "ch-menu-tea-05-1",
-      price: 190
-    },
-    {
-      itemRef: "it-menu-tea-06",
-      charRef: "ch-menu-tea-06-1",
-      price: 190
-    },
-    {
       itemRef: "it-add-sugar",
       charRef: null,
       price: 0
@@ -73505,6 +73569,331 @@ var mock_catalog_default = {
       itemRef: "it-add-icecream",
       charRef: null,
       price: 60
+    },
+    {
+      itemRef: "it-menu-classic-01",
+      charRef: "ch-menu-classic-01-1",
+      price: 170
+    },
+    {
+      itemRef: "it-menu-classic-01",
+      charRef: "ch-menu-classic-01-2",
+      price: 200
+    },
+    {
+      itemRef: "it-menu-classic-01",
+      charRef: "ch-menu-classic-01-3",
+      price: 220
+    },
+    {
+      itemRef: "it-menu-classic-02",
+      charRef: "ch-menu-classic-02-1",
+      price: 220
+    },
+    {
+      itemRef: "it-menu-classic-02",
+      charRef: "ch-menu-classic-02-2",
+      price: 240
+    },
+    {
+      itemRef: "it-menu-classic-03",
+      charRef: "ch-menu-classic-03-1",
+      price: 255
+    },
+    {
+      itemRef: "it-menu-classic-03",
+      charRef: "ch-menu-classic-03-2",
+      price: 285
+    },
+    {
+      itemRef: "it-menu-classic-04",
+      charRef: "ch-menu-classic-04-1",
+      price: 190
+    },
+    {
+      itemRef: "it-menu-classic-05",
+      charRef: "ch-menu-classic-05-1",
+      price: 90
+    },
+    {
+      itemRef: "it-menu-classic-06",
+      charRef: "ch-menu-classic-06-1",
+      price: 130
+    },
+    {
+      itemRef: "it-menu-classic-07",
+      charRef: "ch-menu-classic-07-1",
+      price: 140
+    },
+    {
+      itemRef: "it-menu-classic-07",
+      charRef: "ch-menu-classic-07-2",
+      price: 160
+    },
+    {
+      itemRef: "it-menu-classic-07",
+      charRef: "ch-menu-classic-07-3",
+      price: 180
+    },
+    {
+      itemRef: "it-menu-classic-08",
+      charRef: "ch-menu-classic-08-1",
+      price: 240
+    },
+    {
+      itemRef: "it-menu-classic-08",
+      charRef: "ch-menu-classic-08-2",
+      price: 260
+    },
+    {
+      itemRef: "it-menu-classic-09",
+      charRef: "ch-menu-classic-09-1",
+      price: 140
+    },
+    {
+      itemRef: "it-menu-classic-09",
+      charRef: "ch-menu-classic-09-2",
+      price: 160
+    },
+    {
+      itemRef: "it-menu-classic-09",
+      charRef: "ch-menu-classic-09-3",
+      price: 180
+    },
+    {
+      itemRef: "it-menu-classic-10",
+      charRef: "ch-menu-classic-10-1",
+      price: 190
+    },
+    {
+      itemRef: "it-menu-classic-10",
+      charRef: "ch-menu-classic-10-2",
+      price: 210
+    },
+    {
+      itemRef: "it-menu-classic-11",
+      charRef: "ch-menu-classic-11-1",
+      price: 210
+    },
+    {
+      itemRef: "it-menu-classic-11",
+      charRef: "ch-menu-classic-11-2",
+      price: 230
+    },
+    {
+      itemRef: "it-menu-classic-12",
+      charRef: "ch-menu-classic-12-1",
+      price: 190
+    },
+    {
+      itemRef: "it-menu-classic-12",
+      charRef: "ch-menu-classic-12-2",
+      price: 210
+    },
+    {
+      itemRef: "it-menu-classic-13",
+      charRef: "ch-menu-classic-13-1",
+      price: 240
+    },
+    {
+      itemRef: "it-menu-classic-13",
+      charRef: "ch-menu-classic-13-2",
+      price: 260
+    },
+    {
+      itemRef: "it-menu-author-01",
+      charRef: "ch-menu-author-01-1",
+      price: 280
+    },
+    {
+      itemRef: "it-menu-author-01",
+      charRef: "ch-menu-author-01-2",
+      price: 300
+    },
+    {
+      itemRef: "it-menu-author-02",
+      charRef: "ch-menu-author-02-1",
+      price: 280
+    },
+    {
+      itemRef: "it-menu-author-02",
+      charRef: "ch-menu-author-02-2",
+      price: 300
+    },
+    {
+      itemRef: "it-menu-author-03",
+      charRef: "ch-menu-author-03-1",
+      price: 280
+    },
+    {
+      itemRef: "it-menu-author-03",
+      charRef: "ch-menu-author-03-2",
+      price: 300
+    },
+    {
+      itemRef: "it-menu-author-04",
+      charRef: "ch-menu-author-04-1",
+      price: 280
+    },
+    {
+      itemRef: "it-menu-author-04",
+      charRef: "ch-menu-author-04-2",
+      price: 300
+    },
+    {
+      itemRef: "it-menu-author-05",
+      charRef: "ch-menu-author-05-1",
+      price: 240
+    },
+    {
+      itemRef: "it-menu-author-05",
+      charRef: "ch-menu-author-05-2",
+      price: 260
+    },
+    {
+      itemRef: "it-menu-author-06",
+      charRef: "ch-menu-author-06-1",
+      price: 180
+    },
+    {
+      itemRef: "it-menu-cold-01",
+      charRef: "ch-menu-cold-01-1",
+      price: 280
+    },
+    {
+      itemRef: "it-menu-cold-02",
+      charRef: "ch-menu-cold-02-1",
+      price: 250
+    },
+    {
+      itemRef: "it-menu-cold-03",
+      charRef: "ch-menu-cold-03-1",
+      price: 250
+    },
+    {
+      itemRef: "it-menu-cold-04",
+      charRef: "ch-menu-cold-04-1",
+      price: 280
+    },
+    {
+      itemRef: "it-menu-cold-05",
+      charRef: "ch-menu-cold-05-1",
+      price: 280
+    },
+    {
+      itemRef: "it-menu-cold-06",
+      charRef: "ch-menu-cold-06-1",
+      price: 270
+    },
+    {
+      itemRef: "it-menu-cold-07",
+      charRef: "ch-menu-cold-07-1",
+      price: 260
+    },
+    {
+      itemRef: "it-menu-cold-08",
+      charRef: "ch-menu-cold-08-1",
+      price: 260
+    },
+    {
+      itemRef: "it-menu-cold-09",
+      charRef: "ch-menu-cold-09-1",
+      price: 260
+    },
+    {
+      itemRef: "it-menu-cold-10",
+      charRef: "ch-menu-cold-10-1",
+      price: 280
+    },
+    {
+      itemRef: "it-menu-tea-01",
+      charRef: "ch-menu-tea-01-1",
+      price: 190
+    },
+    {
+      itemRef: "it-menu-tea-01",
+      charRef: "ch-menu-tea-01-2",
+      price: 210
+    },
+    {
+      itemRef: "it-menu-tea-02",
+      charRef: "ch-menu-tea-02-1",
+      price: 190
+    },
+    {
+      itemRef: "it-menu-tea-02",
+      charRef: "ch-menu-tea-02-2",
+      price: 210
+    },
+    {
+      itemRef: "it-menu-tea-03",
+      charRef: "ch-menu-tea-03-1",
+      price: 190
+    },
+    {
+      itemRef: "it-menu-tea-03",
+      charRef: "ch-menu-tea-03-2",
+      price: 210
+    },
+    {
+      itemRef: "it-menu-tea-04",
+      charRef: "ch-menu-tea-04-1",
+      price: 190
+    },
+    {
+      itemRef: "it-menu-tea-04",
+      charRef: "ch-menu-tea-04-2",
+      price: 210
+    },
+    {
+      itemRef: "it-menu-tea-05",
+      charRef: "ch-menu-tea-05-1",
+      price: 190
+    },
+    {
+      itemRef: "it-menu-tea-05",
+      charRef: "ch-menu-tea-05-2",
+      price: 210
+    },
+    {
+      itemRef: "it-menu-tea-06",
+      charRef: "ch-menu-tea-06-1",
+      price: 190
+    },
+    {
+      itemRef: "it-menu-tea-06",
+      charRef: "ch-menu-tea-06-2",
+      price: 210
+    },
+    {
+      itemRef: "it-menu-tea-07",
+      charRef: "ch-menu-tea-07-1",
+      price: 220
+    },
+    {
+      itemRef: "it-menu-lemonade-01",
+      charRef: "ch-menu-lemonade-01-1",
+      price: 270
+    },
+    {
+      itemRef: "it-menu-lemonade-02",
+      charRef: "ch-menu-lemonade-02-1",
+      price: 270
+    },
+    {
+      itemRef: "it-menu-lemonade-03",
+      charRef: "ch-menu-lemonade-03-1",
+      price: 270
+    },
+    {
+      itemRef: "it-menu-lemonade-04",
+      charRef: "ch-menu-lemonade-04-1",
+      price: 270
+    },
+    {
+      itemRef: "it-menu-lemonade-05",
+      charRef: "ch-menu-lemonade-05-1",
+      price: 270
     }
   ],
   stock: [

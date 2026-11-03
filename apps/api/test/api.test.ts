@@ -31,7 +31,9 @@ describe('каталог и настройки', () => {
     const menu = (await app.inject('/v1/menu')).json();
     expect(menu.categories.map((c: { id: string }) => c.id)).toEqual(['classic', 'author', 'cold', 'tea', 'lemonade']);
     const capp = menu.drinks.find((d: { id: string }) => d.id === 'it-menu-classic-01');
-    expect(capp.variants.map((v: { ml: number }) => v.ml)).toEqual([250, 350]);
+    expect(capp.variants.map((v: { ml: number }) => v.ml)).toEqual([250, 350, 450]);
+    const perCat = (id: string) => menu.drinks.filter((d: { categoryId: string }) => d.categoryId === id).length;
+    expect(['classic', 'author', 'cold', 'tea', 'lemonade'].map(perCat)).toEqual([13, 6, 10, 7, 5]);
     expect(menu.addons.find((a: { id: string }) => a.id === 'it-add-milk').priceByMl).toEqual({ '250': 6000, '350': 9000, '450': 12000 });
     expect(menu.syrupBrands.length).toBeGreaterThan(0);
 

@@ -44,8 +44,8 @@ export function Splash({ ready, onDone }: { ready: boolean; onDone: () => void }
   const [hide, setHide] = useState(false);
   const [gone, setGone] = useState(false);
   useEffect(() => {
-    const t = setTimeout(() => setMinPassed(true), 1600);
-    const max = setTimeout(() => setHide(true), 6000);
+    const t = setTimeout(() => setMinPassed(true), 1200);
+    const max = setTimeout(() => setHide(true), 2600);
     return () => (clearTimeout(t), clearTimeout(max));
   }, []);
   useEffect(() => {
