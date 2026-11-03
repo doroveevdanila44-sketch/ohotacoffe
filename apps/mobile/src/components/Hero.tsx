@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useUi } from '../store/ui';
 
 const SLIDES = [
-  { cls: 's-hands', img: 'hands', title: ['Кофе для всех', 'и каждого'], small: 'Индивидуальный подбор' },
+  { cls: 's-hands', img: 'hands', title: ['Кофе для', 'каждого'], small: 'Индивидуальный подбор' },
   { cls: 's-train', img: 'train', title: ['Привозим', 'со всего света'], small: null },
   { cls: 's-pink', img: 'pink', title: ['Кофемашина', 'сломалась?'], small: 'Поможем с ремонтом', tab: 'machine' as const },
 ];

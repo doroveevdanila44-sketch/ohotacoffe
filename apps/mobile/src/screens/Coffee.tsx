@@ -170,7 +170,7 @@ export function Coffee({ active }: { active: boolean }) {
             </div>
           </div>
         ) : null}
-        <div className="box" style={{ marginTop: 14 }}>
+        <div className="box">
           <h3>Меню</h3>
           <div className="cfw">
             {drinks.map((d, k) => (

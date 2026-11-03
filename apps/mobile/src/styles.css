@@ -675,3 +675,29 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 @media (max-height:700px){
   .cfhero,.rhero{padding-top:calc(var(--sat) + 10px)}
 }
+
+/* ===== единая сетка отступов: поля 16, между группами 16, внутри группы 10, между карточками 12 ===== */
+/* Заказать кофе */
+.cfhero{margin-bottom:0}
+.cf .cfc{margin:16px -16px 0;padding:2px 16px}
+.cfs{margin-top:0}
+.cfs .cfi{display:block;margin:16px 0 10px}
+.cfs .cfi h2{margin:0;line-height:1.1}
+.cfs .cfsz{margin:0 0 16px}
+.cfs .cfbt{margin:0;min-height:56px}
+.cf .cfs + .box{margin-top:16px}
+/* Главная */
+.search{margin:0 16px 12px}
+.hero{margin:0 16px}
+.promo{margin:12px 16px 0}
+.ordbtn{margin:12px 16px 0}
+.ordbtn.g{margin-top:12px}
+.sec{padding:16px 16px 12px}
+.feed{padding-left:16px;padding-right:16px}
+@media (min-width:600px){
+  .bnr .hero,.bnr .promo{margin:0}
+  .btn2 .ordbtn{margin:12px 0 0}
+}
+.cf .cfc{margin-top:14px}
+.cfs .cfi{margin-top:14px}
+.sec{padding-top:6px}
