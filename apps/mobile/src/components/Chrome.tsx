@@ -126,7 +126,13 @@ export function SystemBar() {
 
   useLayoutEffect(() => {
     // Safari красит верх экрана по theme-color и по фону html/body, поэтому задаём все три.
-    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', color);
+    // iOS в режиме «На экране Домой» перечитывает цвет, только если тег заменить целиком.
+    const meta = document.createElement('meta');
+    meta.name = 'theme-color';
+    meta.content = color;
+    const old = document.querySelector('meta[name="theme-color"]');
+    if (old) old.replaceWith(meta);
+    else document.head.appendChild(meta);
     document.documentElement.style.backgroundColor = color;
     document.body.style.backgroundColor = color;
   }, [color]);
