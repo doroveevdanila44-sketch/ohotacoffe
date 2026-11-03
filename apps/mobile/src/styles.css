@@ -604,7 +604,7 @@ body.kb .tabbar{display:none}
 }
 
 /* верхняя полоса у динамика и острова, цвет задаёт SystemBar */
-.sysbar{position:fixed;top:0;left:0;right:0;height:max(var(--sat),4px);background:var(--top,#f3f3f5);z-index:60;pointer-events:none;transition:background .3s ease}
+.sysbar{position:fixed;top:0;left:0;right:0;height:max(var(--sat),4px);background:var(--top,#f3f3f5);z-index:60;pointer-events:none}
 .toast,.offline{z-index:70}
 /* уведомление полностью прячется за верхний край, даже при большом вырезе (остров) */
 .toast{transform:translate(-50%,calc(-100% - var(--sat) - 30px));opacity:0;transition:transform .4s cubic-bezier(.3,1.4,.5,1),opacity .2s}
@@ -613,3 +613,6 @@ body.kb .tabbar{display:none}
 
 /* заставка закрывает весь экран, включая зону у острова, и красит верх браузера */
 #splash{position:fixed}
+
+/* экраны переключаются мгновенно, без проявления: цвет верхней полосы меняется в том же кадре */
+.screen{transition:none}

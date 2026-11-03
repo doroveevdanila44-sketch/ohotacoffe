@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 import { Icon, type IconName } from './Icons';
 import { cartCount, useCart } from '../store/cart';
 import { useUi, type Tab } from '../store/ui';
@@ -98,15 +98,17 @@ export function SystemBar() {
   const tab = useUi((s) => s.tab);
   const step = useUi((s) => s.repairStep);
   const splash = useUi((s) => s.splash);
-  const [over, setOver] = useState(false);
+  const key = `${tab}:${step}`;
+  // «Шапка ушла за край» запоминается вместе с экраном, чтобы не тянуться с прошлого экрана.
+  const [scrolled, setScrolled] = useState({ key: '', over: false });
+  const over = scrolled.key === key && scrolled.over;
 
-  useEffect(() => {
-    setOver(false);
+  useLayoutEffect(() => {
     const check = (el: Element | null) => {
       const hero = el?.querySelector('.cfhero, .rhero');
       const bar = document.querySelector('.sysbar') as HTMLElement | null;
-      if (!hero || !bar) return setOver(false);
-      setOver(hero.getBoundingClientRect().bottom <= bar.offsetHeight + 1);
+      const v = !!hero && !!bar && hero.getBoundingClientRect().bottom <= bar.offsetHeight + 1;
+      setScrolled((x) => (x.key === key && x.over === v ? x : { key, over: v }));
     };
     const onScroll = (e: Event) => {
       const el = e.target as HTMLElement;
@@ -115,16 +117,16 @@ export function SystemBar() {
     document.addEventListener('scroll', onScroll, { capture: true, passive: true });
     check(document.querySelector('.screen.active'));
     return () => document.removeEventListener('scroll', onScroll, { capture: true });
-  }, [tab, step]);
+  }, [key]);
 
   let color = GREY;
   if (splash) color = GREEN;
   else if (tab === 'coffee') color = over ? VIOLET : GREEN;
   else if (tab === 'machine') color = step === 'form' ? (over ? GREEN : VIOLET) : GREEN;
 
-  useEffect(() => {
-    document.documentElement.style.setProperty('--top', color);
+  useLayoutEffect(() => {
     document.querySelector('meta[name="theme-color"]')?.setAttribute('content', color);
   }, [color]);
-  return <div className="sysbar" aria-hidden="true" />;
+  // Цвет задаётся прямо в разметке: он меняется в том же кадре, что и экран под ним.
+  return <div className="sysbar" style={{ background: color }} aria-hidden="true" />;
 }
