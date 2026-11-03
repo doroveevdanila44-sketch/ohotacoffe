@@ -1,5 +1,7 @@
 import { useEffect, useLayoutEffect, useState } from 'react';
+import { SystemBars, SystemBarsStyle, SystemBarType } from '@capacitor/core';
 import { Icon, type IconName } from './Icons';
+import { isNative } from '../lib/native';
 import { cartCount, useCart } from '../store/cart';
 import { useUi, type Tab } from '../store/ui';
 import { tap } from '../lib/native';
@@ -136,6 +138,15 @@ export function SystemBar() {
     document.documentElement.style.backgroundColor = color;
     document.body.style.backgroundColor = color;
   }, [color]);
+  // Цвет значков статус-бара и навигации (iOS и Android) подстраивается под цвет под ними.
+  const bottom = splash ? VIOLET : tab === 'coffee' ? VIOLET : tab === 'machine' && step === 'form' ? GREEN : tab === 'machine' ? GREEN : GREY;
+  useEffect(() => {
+    if (!isNative) return;
+    const style = (c: string) => (c === VIOLET ? SystemBarsStyle.Dark : SystemBarsStyle.Light);
+    void SystemBars.setStyle({ bar: SystemBarType.StatusBar, style: style(color) }).catch(() => undefined);
+    void SystemBars.setStyle({ bar: SystemBarType.NavigationBar, style: style(bottom) }).catch(() => undefined);
+  }, [color, bottom]);
+
   // Цвет задаётся прямо в разметке: он меняется в том же кадре, что и экран под ним.
   return <div className="sysbar" style={{ background: color }} aria-hidden="true" />;
 }

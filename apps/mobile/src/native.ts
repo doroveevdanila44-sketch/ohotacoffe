@@ -2,7 +2,6 @@ import { App as CapApp } from '@capacitor/app';
 import { Browser } from '@capacitor/browser';
 import { Keyboard } from '@capacitor/keyboard';
 import { SplashScreen } from '@capacitor/splash-screen';
-import { StatusBar, Style } from '@capacitor/status-bar';
 import { FirebaseMessaging } from '@capacitor-firebase/messaging';
 import { api } from './lib/api';
 import { isNative, platform } from './lib/native';
@@ -32,7 +31,6 @@ function openFromPush(data: Record<string, unknown> | undefined) {
 
 export async function initNative() {
   if (!isNative) return;
-  void StatusBar.setStyle({ style: Style.Light }).catch(() => undefined);
 
   void CapApp.addListener('appUrlOpen', (e) => handleUrl(e.url));
   void CapApp.addListener('backButton', ({ canGoBack }) => {
