@@ -65,9 +65,10 @@ export function Profile({ active }: { active: boolean }) {
                     <h3>Бонусная карта</h3>
                     <div className="cups" role="img" aria-label={`Накоплено ${have} из ${total} стаканчиков`}>
                       {Array.from({ length: total }, (_, i) => (
-                        <i key={i} className={i < have ? 'on' : ''}>
-                          {i === total - 1 ? <em>6</em> : null}
-                        </i>
+                        <div key={i} className={`cup${i < have ? ' on' : ''}${i === total - 1 ? ' last' : ''}`}>
+                          {i === total - 1 ? <span className="rays" aria-hidden="true" /> : null}
+                          <img src="img/bonus-cup.webp" alt="" draggable={false} />
+                        </div>
                       ))}
                     </div>
                     <p className="bonus-txt">
