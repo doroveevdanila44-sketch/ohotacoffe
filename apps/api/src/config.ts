@@ -66,16 +66,16 @@ const EnvSchema = z.object({
   PICKUP_POINTS: z
     .string()
     .default(
-      '[{"id":"shop","title":"Кофейная лавка","address":"Петропавловск-Камчатский"},{"id":"elizovo","title":"Магазин","address":"Елизово"}]',
+      '[{"id":"shop","title":"Магазин","address":"пер. имени Заварицкого А.Н., 11, строение 8","hours":"Пн–Пт 10:00–18:00, Сб 11:00–16:00, Вс выходной"},{"id":"coffee","title":"Чайная лавка и кофейня","address":"ул. Топоркова, 8, ТЦ «Армат Центр», модуль 1, линия 3","hours":"Пн–Вс 9:00–20:00"}]',
     ),
   SUPPORT_PHONE: z.string().default('+7 900 689-18-24'),
-  WORKING_HOURS: z.string().default('Пн–Пт 10:00–18:00, Сб 11:00–14:00, Вс выходной'),
+  WORKING_HOURS: z.string().default('Магазин: Пн–Пт 10:00–18:00, Сб 11:00–16:00, Вс выходной. Кофейня: ежедневно 9:00–20:00'),
   LEGAL_OPERATOR: z.string().default('[Наименование оператора, ИНН, ОГРНИП/ОГРН]'),
   LEGAL_EMAIL: z.string().default('[email для обращений]'),
 });
 
 export type Config = z.infer<typeof EnvSchema> & {
-  pickupPoints: { id: string; title: string; address: string }[];
+  pickupPoints: { id: string; title: string; address: string; hours?: string }[];
   reviewPhones: string[];
   onlinePaymentEnabled: boolean;
 };

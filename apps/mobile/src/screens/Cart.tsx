@@ -301,10 +301,10 @@ export function Cart({ active }: { active: boolean }) {
                         <span>
                           {p.title}
                           <small>{p.address}</small>
+                          {p.hours ? <small>{p.hours}</small> : null}
                         </span>
                       </button>
                     ))}
-                    {settings?.workingHours ? <div className="hint">{settings.workingHours}</div> : null}
                   </div>
                 )}
                 <div className="box">

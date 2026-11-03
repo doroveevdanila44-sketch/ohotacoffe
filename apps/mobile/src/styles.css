@@ -726,3 +726,15 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 
 /* Кружка в корзине: показываем картинку как есть, без теней и подложки */
 .ci .mug,.ci .mug img{background:none;box-shadow:none;filter:none;border:0}
+
+/* Бонусная карта: 6 стаканчиков */
+.box.bon{display:block}
+.box.bon h3{color:#fff;margin:0 0 12px}
+.bon .cups{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.bon .cups i{position:relative;aspect-ratio:3/4;border-radius:4px 4px 12px 12px;border:2px solid rgba(255,255,255,.55);background:transparent;display:flex;align-items:center;justify-content:center}
+.bon .cups i.on{background:#fff;border-color:#fff}
+.bon .cups i.on::after{content:"";width:34%;height:18%;border-radius:50%;background:var(--v);opacity:.85}
+.bon .cups i em{font-style:normal;font-size:12px;font-weight:800;color:rgba(255,255,255,.8)}
+.bon .cups i.on em{display:none}
+.bon .bonus-txt{margin:12px 0 0;font-size:15px;font-weight:700;color:#fff}
+.bon span{display:block;margin-top:8px;font-size:13px;opacity:.85}

@@ -34,6 +34,6 @@ export class MockAdapter implements OneCAdapter {
   }
 
   async getBonusBalance() {
-    return 12;
+    return 4; // накоплено стаканчиков из 6
   }
 }

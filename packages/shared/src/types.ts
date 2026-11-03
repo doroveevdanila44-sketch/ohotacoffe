@@ -83,7 +83,7 @@ export interface AppSettings {
   freeDeliveryFrom: Kopecks;
   deliveryFee: Kopecks;
   deliveryEta: string;
-  pickupPoints: { id: string; title: string; address: string }[];
+  pickupPoints: { id: string; title: string; address: string; hours?: string }[];
   onlinePaymentEnabled: boolean;
   supportPhone: string;
   workingHours: string;

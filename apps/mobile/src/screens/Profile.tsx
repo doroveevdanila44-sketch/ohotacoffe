@@ -67,7 +67,7 @@ export function Profile({ active }: { active: boolean }) {
             </div>
             <div className="mname">Войдите по номеру телефона</div>
             <div className="msub">Чтобы оформлять заказы, следить за ремонтом и копить бонусы</div>
-            <button className="bt" onClick={() => open({ type: 'login' })}>
+            <button className="bonus-txt" onClick={() => open({ type: 'login' })}>
               Войти
             </button>
           </div>
@@ -103,11 +103,28 @@ export function Profile({ active }: { active: boolean }) {
               </div>
             ) : null}
             <div className="box bon">
-              <div>
-                <b>{me.data?.bonus ?? 0}</b>
-                <span>бонусов на счёте</span>
-              </div>
-              <Icon name="heart" />
+              {(() => {
+                const total = 6;
+                const have = Math.max(0, Math.min(total, Math.floor(me.data?.bonus ?? 0)));
+                return (
+                  <>
+                    <h3>Бонусная карта</h3>
+                    <div className="cups" role="img" aria-label={`Накоплено ${have} из ${total} стаканчиков`}>
+                      {Array.from({ length: total }, (_, i) => (
+                        <i key={i} className={i < have ? 'on' : ''}>
+                          {i === total - 1 ? <em>6</em> : null}
+                        </i>
+                      ))}
+                    </div>
+                    <p className="bonus-txt">
+                      {have >= total
+                        ? 'Следующий кофе бесплатно. Заберите его на любой точке'
+                        : `Накоплено ${have} из ${total}. Ещё ${total - have} и ${total}-й кофе бесплатно`}
+                    </p>
+                    <span>Бесплатный кофе при самовывозе с любой точки</span>
+                  </>
+                );
+              })()}
             </div>
           </>
         )}
@@ -253,7 +270,7 @@ export function EditProfileSheet({ open }: { open: boolean }) {
       <input className="fi" value={name} maxLength={80} autoComplete="given-name" onChange={(e) => setName(e.target.value)} />
       <label className="lb">Город</label>
       <input className="fi" value={city} maxLength={80} placeholder="Петропавловск-Камчатский" onChange={(e) => setCity(e.target.value)} />
-      <button className="bt" disabled={busy} onClick={save}>
+      <button className="bonus-txt" disabled={busy} onClick={save}>
         {busy ? <Spinner /> : 'Сохранить'}
       </button>
     </Sheet>

@@ -67,7 +67,7 @@ describe('вход по SMS', () => {
     const ok = await app.inject({ method: 'POST', url: '/v1/auth/verify', payload: { phone: '+79001112233', code: sms.lastCode() } });
     expect(ok.json().isNew).toBe(true);
     const me = await app.inject({ url: '/v1/me', headers: { authorization: `Bearer ${ok.json().token}` } });
-    expect(me.json()).toMatchObject({ phone: '+79001112233', bonus: 12 });
+    expect(me.json()).toMatchObject({ phone: '+79001112233', bonus: 4 });
 
     await app.inject({ method: 'POST', url: '/v1/auth/request-code', payload: { phone: '+79990000000', consent: true } });
     expect(sms.sent).toHaveLength(1);
@@ -146,7 +146,7 @@ describe('заказ', () => {
       await drain();
     }
     expect(onec.orders).toHaveLength(1);
-    expect(onec.orders[0]!.pickupPoint).toContain('Кофейная лавка');
+    expect(onec.orders[0]!.pickupPoint).toContain('Магазин');
   });
 
   it('проверяет данные корзины', async () => {

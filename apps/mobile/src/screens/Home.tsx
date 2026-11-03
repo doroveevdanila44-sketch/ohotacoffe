@@ -91,7 +91,7 @@ export function Home({ active }: { active: boolean }) {
           </div>
           <div className="strip">
             <i />
-            <span>Петропавловск-Камчатский, Елизово</span>
+            <span>Петропавловск-Камчатский</span>
             <i />
           </div>
         </section>
