@@ -75536,7 +75536,7 @@ function buildSnapshot(src, cfg, opts) {
       code: it.code,
       title,
       subtitle: ex.subtitle ?? "",
-      description: it.description ?? "",
+      description: it.description || ex.description || "",
       categoryId: rule.id,
       kind,
       price,

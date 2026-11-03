@@ -1,486 +1,506 @@
 {
- "shop": [
-  {
-   "id": "ground",
-   "title": "Молотый кофе",
-   "groups": [
-    "SHOP-GROUND"
-   ]
-  },
-  {
-   "id": "beans",
-   "title": "Кофе в зёрнах",
-   "groups": [
-    "SHOP-BEANS"
-   ]
-  },
-  {
-   "id": "drip",
-   "title": "Дрип-кофе",
-   "groups": [
-    "SHOP-DRIP"
-   ]
-  },
-  {
-   "id": "instant",
-   "title": "Растворимый кофе",
-   "groups": [
-    "SHOP-INSTANT"
-   ]
-  },
-  {
-   "id": "tea",
-   "title": "Чай",
-   "groups": [
-    "SHOP-TEA"
-   ]
-  },
-  {
-   "id": "syrups",
-   "title": "Сиропы",
-   "groups": [
-    "SHOP-SYRUPS"
-   ]
-  }
- ],
- "menu": [
-  {
-   "id": "classic",
-   "title": "Классика",
-   "groups": [
-    "MENU-CLASSIC"
-   ],
-   "presentation": "classic"
-  },
-  {
-   "id": "author",
-   "title": "Авторский кофе",
-   "groups": [
-    "MENU-AUTHOR"
-   ],
-   "presentation": "author"
-  },
-  {
-   "id": "cold",
-   "title": "Холодные напитки",
-   "groups": [
-    "MENU-COLD"
-   ],
-   "presentation": "cold"
-  },
-  {
-   "id": "tea",
-   "title": "Чай",
-   "groups": [
-    "MENU-TEA"
-   ],
-   "presentation": "tea"
-  },
-  {
-   "id": "lemonade",
-   "title": "Лимонады",
-   "groups": [
-    "MENU-LEMONADE"
-   ],
-   "presentation": "lemonade"
-  }
- ],
- "addons": {
-  "groups": [
-   "MENU-ADDONS"
+  "shop": [
+    {
+      "id": "ground",
+      "title": "Молотый кофе",
+      "groups": [
+        "SHOP-GROUND"
+      ]
+    },
+    {
+      "id": "beans",
+      "title": "Кофе в зёрнах",
+      "groups": [
+        "SHOP-BEANS"
+      ]
+    },
+    {
+      "id": "drip",
+      "title": "Дрип-кофе",
+      "groups": [
+        "SHOP-DRIP"
+      ]
+    },
+    {
+      "id": "instant",
+      "title": "Растворимый кофе",
+      "groups": [
+        "SHOP-INSTANT"
+      ]
+    },
+    {
+      "id": "tea",
+      "title": "Чай",
+      "groups": [
+        "SHOP-TEA"
+      ]
+    },
+    {
+      "id": "syrups",
+      "title": "Сиропы",
+      "groups": [
+        "SHOP-SYRUPS"
+      ]
+    }
   ],
-  "items": {
-   "ADD-SUGAR": {
-    "maxQty": 3,
-    "sort": 1
-   },
-   "ADD-CINNAMON": {
-    "sort": 2
-   },
-   "ADD-SYRUP": {
-    "needsFlavor": true,
-    "maxQty": 3,
-    "sort": 4
-   }
+  "menu": [
+    {
+      "id": "classic",
+      "title": "Классика",
+      "groups": [
+        "MENU-CLASSIC"
+      ],
+      "presentation": "classic"
+    },
+    {
+      "id": "author",
+      "title": "Авторский кофе",
+      "groups": [
+        "MENU-AUTHOR"
+      ],
+      "presentation": "author"
+    },
+    {
+      "id": "cold",
+      "title": "Холодные напитки",
+      "groups": [
+        "MENU-COLD"
+      ],
+      "presentation": "cold"
+    },
+    {
+      "id": "tea",
+      "title": "Чай",
+      "groups": [
+        "MENU-TEA"
+      ],
+      "presentation": "tea"
+    },
+    {
+      "id": "lemonade",
+      "title": "Лимонады",
+      "groups": [
+        "MENU-LEMONADE"
+      ],
+      "presentation": "lemonade"
+    }
+  ],
+  "addons": {
+    "groups": [
+      "MENU-ADDONS"
+    ],
+    "items": {
+      "ADD-SUGAR": {
+        "maxQty": 3,
+        "sort": 1
+      },
+      "ADD-CINNAMON": {
+        "sort": 2
+      },
+      "ADD-SYRUP": {
+        "needsFlavor": true,
+        "maxQty": 3,
+        "sort": 4
+      }
+    }
+  },
+  "syrupsCategory": "syrups",
+  "feed": [
+    "lavazza",
+    "tasty",
+    "lavrossa",
+    "sbmix",
+    "osulloc",
+    "sbcaramel",
+    "ceylon",
+    "motif",
+    "island",
+    "sbmocha",
+    "lam",
+    "hugging",
+    "pukka",
+    "barinoff",
+    "monin",
+    "lavbarista",
+    "tastyespresso",
+    "routin",
+    "lavoro",
+    "maccoffee"
+  ],
+  "products": {
+    "lavazza": {
+      "subtitle": "Молотый кофе · 200 г",
+      "image": "lavazza.webp",
+      "imageRatio": 0.7453,
+      "facts": [
+        "Крепость 8 из 10",
+        "Нотки шоколада",
+        "Рим в одной чашке"
+      ],
+      "keywords": "лаваза лавацца lavazza",
+      "description": "Lavazza Tales of Roma: молотый кофе, 200 г. Крепость 8 из 10. Нотки шоколада. Рим в одной чашке."
+    },
+    "tasty": {
+      "subtitle": "Дрип-кофе · 10,5 г",
+      "image": "tasty.webp",
+      "imageRatio": 0.8182,
+      "facts": [
+        "Орехи и тёмные ягоды",
+        "Идеально с молоком",
+        "Заваришь где угодно"
+      ],
+      "keywords": "тейсти тэйсти дрип tasty",
+      "description": "Tasty Coffee Drip «Бэрри»: дрип-кофе, 10,5 г. Орехи и тёмные ягоды. Идеально с молоком. Заваришь где угодно."
+    },
+    "lavrossa": {
+      "subtitle": "Молотый кофе · 250 г",
+      "image": "lavrossa.webp",
+      "imageRatio": 0.654,
+      "facts": [
+        "Крепость 5 из 10",
+        "Идеален для мока",
+        "Классика Lavazza"
+      ],
+      "keywords": "лаваза лавацца росса lavazza rossa",
+      "description": "Lavazza Qualità Rossa: молотый кофе, 250 г. Крепость 5 из 10. Идеален для мока. Классика Lavazza."
+    },
+    "sbmix": {
+      "subtitle": "Растворимый кофе · 4 вкуса",
+      "image": "sbmix.webp",
+      "imageRatio": 0.7956,
+      "facts": [
+        "Мокка, латте, карамель",
+        "Как в кофейне, дома",
+        "Просто залей водой"
+      ],
+      "keywords": "старбакс starbucks",
+      "oldPrice": 920.0,
+      "description": "Starbucks Premium Mix: растворимый кофе, 4 вкуса. Мокка, латте, карамель. Как в кофейне, дома. Просто залей водой."
+    },
+    "osulloc": {
+      "subtitle": "Чай с острова Чеджу · 40 пакетиков",
+      "image": "osulloc.webp",
+      "imageRatio": 1.0042,
+      "facts": [
+        "Груша с мёдом и юдзу",
+        "Хочется подарить",
+        "10 вкусов в коробке"
+      ],
+      "keywords": "осулок осулок чай osulloc",
+      "description": "Osulloc, 10 вкусов: чай с острова Чеджу, 40 пакетиков. Груша с мёдом и юдзу. Хочется подарить. 10 вкусов в коробке."
+    },
+    "sbcaramel": {
+      "subtitle": "Молотый кофе · 311 г",
+      "image": "sbcaramel.webp",
+      "imageRatio": 0.7484,
+      "facts": [
+        "Сливочная карамель",
+        "Натуральные ароматы"
+      ],
+      "keywords": "старбакс starbucks",
+      "description": "Starbucks Caramel: молотый кофе, 311 г. Сливочная карамель. Натуральные ароматы."
+    },
+    "ceylon": {
+      "subtitle": "Цейлонский чай · 24 пакетика",
+      "image": "ceylon.webp",
+      "imageRatio": 1.0169,
+      "facts": [
+        "Масала и лаванда",
+        "Чай со Шри-Ланки",
+        "Яблоко с корицей"
+      ],
+      "keywords": "цейлон чай ceylon",
+      "description": "Special Tea Selection: цейлонский чай, 24 пакетика. Масала и лаванда. Чай со Шри-Ланки. Яблоко с корицей."
+    },
+    "motif": {
+      "subtitle": "Сироп · 473 мл · 4 вкуса",
+      "image": "motif.webp",
+      "imageRatio": 1.3508,
+      "facts": [
+        "Одна цена на все вкусы",
+        "Твоя подпись в чашке"
+      ],
+      "keywords": "мотиф motif",
+      "description": "Сиропы Motif: сироп, 473 мл, 4 вкуса. Одна цена на все вкусы. Твоя подпись в чашке."
+    },
+    "island": {
+      "subtitle": "Дрип-пакеты · 4 вида",
+      "image": "island.webp",
+      "imageRatio": 0.8571,
+      "facts": [
+        "Островной кофе с собой",
+        "Четыре яркие упаковки",
+        "Заваришь где угодно"
+      ],
+      "keywords": "дрип островной island drip",
+      "description": "Drip Coffee, Island: дрип-пакеты, 4 вида. Островной кофе с собой. Четыре яркие упаковки. Заваришь где угодно."
+    },
+    "sbmocha": {
+      "subtitle": "Молотый кофе · 311 г",
+      "image": "sbmocha.webp",
+      "imageRatio": 0.7555,
+      "facts": [
+        "Шоколад в чашке",
+        "Натуральные ароматы"
+      ],
+      "keywords": "старбакс starbucks мокка",
+      "oldPrice": 1890.0,
+      "description": "Starbucks Mocha: молотый кофе, 311 г. Шоколад в чашке. Натуральные ароматы."
+    },
+    "lam": {
+      "subtitle": "Сироп · 950 мл · 3 вкуса",
+      "image": "lam.webp",
+      "imageRatio": 0.9743,
+      "facts": [
+        "Ноль сахара и калорий",
+        "С L-теанином",
+        "Одна цена на все вкусы"
+      ],
+      "keywords": "лэм лам lam",
+      "description": "Сиропы lam: сироп, 950 мл, 3 вкуса. Ноль сахара и калорий. С L-теанином. Одна цена на все вкусы."
+    },
+    "hugging": {
+      "subtitle": "Дрип-пакеты · 13 г",
+      "image": "hugging.webp",
+      "imageRatio": 0.8561,
+      "facts": [
+        "Кения и Эфиопия",
+        "Йемен и Бразилия",
+        "Моносорта и бленды"
+      ],
+      "keywords": "хагинг дрип hugging",
+      "description": "Hugging Drip, ассорти: дрип-пакеты, 13 г. Кения и Эфиопия. Йемен и Бразилия. Моносорта и бленды."
+    },
+    "pukka": {
+      "subtitle": "Органический чай · 45 пакетиков",
+      "image": "pukka.webp",
+      "imageRatio": 0.7407,
+      "facts": [
+        "Матча, имбирь, лаванда",
+        "Органик и fair trade",
+        "Красивая коробка"
+      ],
+      "keywords": "пукка pukka",
+      "description": "Pukka Organic Selection: органический чай, 45 пакетиков. Матча, имбирь, лаванда. Органик и fair trade. Красивая коробка."
+    },
+    "barinoff": {
+      "subtitle": "Сироп · 0,7 л · 12 вкусов",
+      "image": "barinoff.webp",
+      "imageRatio": 0.8276,
+      "facts": [
+        "Одна цена на все вкусы",
+        "Барная серия"
+      ],
+      "keywords": "баринов barinoff",
+      "description": "Сиропы Barinoff: сироп, 0,7 л, 12 вкусов. Одна цена на все вкусы. Барная серия."
+    },
+    "monin": {
+      "subtitle": "Сироп · 0,7 л · 12 вкусов",
+      "image": "monin.webp",
+      "imageRatio": 0.9231,
+      "facts": [
+        "Одна цена на все вкусы",
+        "Выберите свой вкус"
+      ],
+      "keywords": "манин monin",
+      "description": "Сиропы Monin: сироп, 0,7 л, 12 вкусов. Одна цена на все вкусы. Выберите свой вкус."
+    },
+    "lavbarista": {
+      "subtitle": "Кофе в зёрнах · 1 кг",
+      "image": "lavbarista.webp",
+      "imageRatio": 0.7207,
+      "facts": [
+        "Крепость 6 из 10",
+        "100% арабика",
+        "Для эспрессо и латте"
+      ],
+      "keywords": "лаваза лавацца барista баристa perfetto lavazza barista бариста перфетто",
+      "description": "Lavazza Barista Perfetto: кофе в зёрнах, 1 кг. Крепость 6 из 10. 100% арабика. Для эспрессо и латте."
+    },
+    "tastyespresso": {
+      "subtitle": "Бразилия Серрадо · 1 кг",
+      "image": "tastyespresso.webp",
+      "imageRatio": 0.8,
+      "facts": [
+        "Орехи и карамель",
+        "Обжарка под эспрессо",
+        "Обжарен в Ижевске"
+      ],
+      "keywords": "тейсти тэйсти эспрессо серрадо tasty espresso",
+      "description": "Tasty Coffee Espresso: бразилия Серрадо, 1 кг. Орехи и карамель. Обжарка под эспрессо. Обжарен в Ижевске."
+    },
+    "routin": {
+      "subtitle": "Сироп · 1 л · 3 вкуса",
+      "image": "routin.webp",
+      "imageRatio": 0.7809,
+      "facts": [
+        "Французская классика",
+        "Одна цена на все вкусы",
+        "С 1883 года"
+      ],
+      "keywords": "рутин рутен routin 1883",
+      "description": "Сиропы 1883 Routin: сироп, 1 л, 3 вкуса. Французская классика. Одна цена на все вкусы. С 1883 года."
+    },
+    "lavoro": {
+      "subtitle": "Кофе · 250 г",
+      "image": "lavoro.webp",
+      "imageRatio": 0.8333,
+      "facts": [
+        "Крепость 5 из 10",
+        "100% арабика",
+        "Perfect Symphony"
+      ],
+      "keywords": "лаваза лавацца золотая оро lavazza oro",
+      "description": "Lavazza Qualità Oro: кофе, 250 г. Крепость 5 из 10. 100% арабика. Perfect Symphony."
+    },
+    "maccoffee": {
+      "subtitle": "Растворимый кофе · саше 20 г",
+      "image": "maccoffee.webp",
+      "imageRatio": 0.8,
+      "facts": [
+        "Классика в одно касание",
+        "Кофе, сливки и сахар",
+        "Просто залей водой"
+      ],
+      "keywords": "маккофе мак кофе maccoffee 3в1",
+      "description": "MacCoffee Original 3 в 1: растворимый кофе, саше 20 г. Классика в одно касание. Кофе, сливки и сахар. Просто залей водой."
+    },
+    "MENU-CLASSIC-01": {
+      "color": "#b9825a"
+    },
+    "MENU-CLASSIC-02": {
+      "color": "#d1a67c"
+    },
+    "MENU-CLASSIC-03": {
+      "color": "#e3c29a"
+    },
+    "MENU-CLASSIC-04": {
+      "color": "#b57d52"
+    },
+    "MENU-CLASSIC-05": {
+      "color": "#2a170d",
+      "rowBreak": true
+    },
+    "MENU-CLASSIC-06": {
+      "color": "#3b2214"
+    },
+    "MENU-CLASSIC-07": {
+      "color": "#4a2c1a"
+    },
+    "MENU-CLASSIC-08": {
+      "color": "#5a341d"
+    },
+    "MENU-CLASSIC-09": {
+      "color": "#6a3b24",
+      "rowBreak": true
+    },
+    "MENU-CLASSIC-10": {
+      "color": "#7a4a32"
+    },
+    "MENU-CLASSIC-11": {
+      "color": "#4b2a1b"
+    },
+    "MENU-CLASSIC-12": {
+      "color": "#3a2015",
+      "note": "Регион Кот-д’Ивуар"
+    },
+    "MENU-CLASSIC-13": {
+      "color": "#8fbf5a",
+      "rowBreak": true,
+      "note": "Зелёная или голубая"
+    },
+    "MENU-AUTHOR-01": {
+      "color": "#c9b3e6"
+    },
+    "MENU-AUTHOR-02": {
+      "color": "#efe3cf"
+    },
+    "MENU-AUTHOR-03": {
+      "color": "#c89a62"
+    },
+    "MENU-AUTHOR-04": {
+      "color": "#e8d3b0",
+      "rowBreak": true
+    },
+    "MENU-AUTHOR-05": {
+      "color": "#c18f5a"
+    },
+    "MENU-AUTHOR-06": {
+      "color": "#d9923a",
+      "rowBreak": true
+    },
+    "MENU-COLD-01": {
+      "color": "#8fbf5a"
+    },
+    "MENU-COLD-02": {
+      "color": "#d1a67c"
+    },
+    "MENU-COLD-03": {
+      "color": "#cdb08a"
+    },
+    "MENU-COLD-04": {
+      "color": "#6a3b24",
+      "rowBreak": true
+    },
+    "MENU-COLD-05": {
+      "color": "#c2335a"
+    },
+    "MENU-COLD-06": {
+      "color": "#e0a040",
+      "rowBreak": true
+    },
+    "MENU-COLD-07": {
+      "color": "#f1dc7a"
+    },
+    "MENU-COLD-08": {
+      "color": "#3b2214",
+      "rowBreak": true
+    },
+    "MENU-COLD-09": {
+      "color": "#d9c3a0"
+    },
+    "MENU-COLD-10": {
+      "color": "#c9a37a"
+    },
+    "MENU-TEA-01": {
+      "color": "#f0a030"
+    },
+    "MENU-TEA-02": {
+      "color": "#d6335a"
+    },
+    "MENU-TEA-03": {
+      "color": "#9bbf5a"
+    },
+    "MENU-TEA-04": {
+      "color": "#7aa04a"
+    },
+    "MENU-TEA-05": {
+      "color": "#b5733a",
+      "rowBreak": true
+    },
+    "MENU-TEA-06": {
+      "color": "#c97d3a",
+      "note": "Соберите свой чай"
+    },
+    "MENU-TEA-07": {
+      "color": "#e8a050",
+      "rowBreak": true
+    },
+    "MENU-LEMONADE-01": {
+      "color": "#4fb0f0"
+    },
+    "MENU-LEMONADE-02": {
+      "color": "#e0507a"
+    },
+    "MENU-LEMONADE-03": {
+      "color": "#8a4fc0"
+    },
+    "MENU-LEMONADE-04": {
+      "color": "#8fe08a",
+      "rowBreak": true
+    },
+    "MENU-LEMONADE-05": {
+      "color": "#f0b84a"
+    }
   }
- },
- "syrupsCategory": "syrups",
- "feed": [
-  "lavazza",
-  "tasty",
-  "lavrossa",
-  "sbmix",
-  "osulloc",
-  "sbcaramel",
-  "ceylon",
-  "motif",
-  "island",
-  "sbmocha",
-  "lam",
-  "hugging",
-  "pukka",
-  "barinoff",
-  "monin",
-  "lavbarista",
-  "tastyespresso",
-  "routin",
-  "lavoro",
-  "maccoffee"
- ],
- "products": {
-  "lavazza": {
-   "subtitle": "Молотый кофе · 200 г",
-   "image": "lavazza.webp",
-   "imageRatio": 0.7453,
-   "facts": [
-    "Крепость 8 из 10",
-    "Нотки шоколада",
-    "Рим в одной чашке"
-   ],
-   "keywords": "лаваза лавацца lavazza"
-  },
-  "tasty": {
-   "subtitle": "Дрип-кофе · 10,5 г",
-   "image": "tasty.webp",
-   "imageRatio": 0.8182,
-   "facts": [
-    "Орехи и тёмные ягоды",
-    "Идеально с молоком",
-    "Заваришь где угодно"
-   ],
-   "keywords": "тейсти тэйсти дрип tasty"
-  },
-  "lavrossa": {
-   "subtitle": "Молотый кофе · 250 г",
-   "image": "lavrossa.webp",
-   "imageRatio": 0.654,
-   "facts": [
-    "Крепость 5 из 10",
-    "Идеален для мока",
-    "Классика Lavazza"
-   ],
-   "keywords": "лаваза лавацца росса lavazza rossa"
-  },
-  "sbmix": {
-   "subtitle": "Растворимый кофе · 4 вкуса",
-   "image": "sbmix.webp",
-   "imageRatio": 0.7956,
-   "facts": [
-    "Мокка, латте, карамель",
-    "Как в кофейне, дома",
-    "Просто залей водой"
-   ],
-   "keywords": "старбакс starbucks",
-   "oldPrice": 920.0
-  },
-  "osulloc": {
-   "subtitle": "Чай с острова Чеджу · 40 пакетиков",
-   "image": "osulloc.webp",
-   "imageRatio": 1.0042,
-   "facts": [
-    "Груша с мёдом и юдзу",
-    "Хочется подарить",
-    "10 вкусов в коробке"
-   ],
-   "keywords": "осулок осулок чай osulloc"
-  },
-  "sbcaramel": {
-   "subtitle": "Молотый кофе · 311 г",
-   "image": "sbcaramel.webp",
-   "imageRatio": 0.7484,
-   "facts": [
-    "Сливочная карамель",
-    "Натуральные ароматы"
-   ],
-   "keywords": "старбакс starbucks"
-  },
-  "ceylon": {
-   "subtitle": "Цейлонский чай · 24 пакетика",
-   "image": "ceylon.webp",
-   "imageRatio": 1.0169,
-   "facts": [
-    "Масала и лаванда",
-    "Чай со Шри-Ланки",
-    "Яблоко с корицей"
-   ],
-   "keywords": "цейлон чай ceylon"
-  },
-  "motif": {
-   "subtitle": "Сироп · 473 мл · 4 вкуса",
-   "image": "motif.webp",
-   "imageRatio": 1.3508,
-   "facts": [
-    "Одна цена на все вкусы",
-    "Твоя подпись в чашке"
-   ],
-   "keywords": "мотиф motif"
-  },
-  "island": {
-   "subtitle": "Дрип-пакеты · 4 вида",
-   "image": "island.webp",
-   "imageRatio": 0.8571,
-   "facts": [
-    "Островной кофе с собой",
-    "Четыре яркие упаковки",
-    "Заваришь где угодно"
-   ],
-   "keywords": "дрип островной island drip"
-  },
-  "sbmocha": {
-   "subtitle": "Молотый кофе · 311 г",
-   "image": "sbmocha.webp",
-   "imageRatio": 0.7555,
-   "facts": [
-    "Шоколад в чашке",
-    "Натуральные ароматы"
-   ],
-   "keywords": "старбакс starbucks мокка",
-   "oldPrice": 1890.0
-  },
-  "lam": {
-   "subtitle": "Сироп · 950 мл · 3 вкуса",
-   "image": "lam.webp",
-   "imageRatio": 0.9743,
-   "facts": [
-    "Ноль сахара и калорий",
-    "С L-теанином",
-    "Одна цена на все вкусы"
-   ],
-   "keywords": "лэм лам lam"
-  },
-  "hugging": {
-   "subtitle": "Дрип-пакеты · 13 г",
-   "image": "hugging.webp",
-   "imageRatio": 0.8561,
-   "facts": [
-    "Кения и Эфиопия",
-    "Йемен и Бразилия",
-    "Моносорта и бленды"
-   ],
-   "keywords": "хагинг дрип hugging"
-  },
-  "pukka": {
-   "subtitle": "Органический чай · 45 пакетиков",
-   "image": "pukka.webp",
-   "imageRatio": 0.7407,
-   "facts": [
-    "Матча, имбирь, лаванда",
-    "Органик и fair trade",
-    "Красивая коробка"
-   ],
-   "keywords": "пукка pukka"
-  },
-  "barinoff": {
-   "subtitle": "Сироп · 0,7 л · 12 вкусов",
-   "image": "barinoff.webp",
-   "imageRatio": 0.8276,
-   "facts": [
-    "Одна цена на все вкусы",
-    "Барная серия"
-   ],
-   "keywords": "баринов barinoff"
-  },
-  "monin": {
-   "subtitle": "Сироп · 0,7 л · 12 вкусов",
-   "image": "monin.webp",
-   "imageRatio": 0.9231,
-   "facts": [
-    "Одна цена на все вкусы",
-    "Выберите свой вкус"
-   ],
-   "keywords": "манин monin"
-  },
-  "lavbarista": {
-   "subtitle": "Кофе в зёрнах · 1 кг",
-   "image": "lavbarista.webp",
-   "imageRatio": 0.7207,
-   "facts": [
-    "Крепость 6 из 10",
-    "100% арабика",
-    "Для эспрессо и латте"
-   ],
-   "keywords": "лаваза лавацца барista баристa perfetto lavazza barista бариста перфетто"
-  },
-  "tastyespresso": {
-   "subtitle": "Бразилия Серрадо · 1 кг",
-   "image": "tastyespresso.webp",
-   "imageRatio": 0.8,
-   "facts": [
-    "Орехи и карамель",
-    "Обжарка под эспрессо",
-    "Обжарен в Ижевске"
-   ],
-   "keywords": "тейсти тэйсти эспрессо серрадо tasty espresso"
-  },
-  "routin": {
-   "subtitle": "Сироп · 1 л · 3 вкуса",
-   "image": "routin.webp",
-   "imageRatio": 0.7809,
-   "facts": [
-    "Французская классика",
-    "Одна цена на все вкусы",
-    "С 1883 года"
-   ],
-   "keywords": "рутин рутен routin 1883"
-  },
-  "lavoro": {
-   "subtitle": "Кофе · 250 г",
-   "image": "lavoro.webp",
-   "imageRatio": 0.8333,
-   "facts": [
-    "Крепость 5 из 10",
-    "100% арабика",
-    "Perfect Symphony"
-   ],
-   "keywords": "лаваза лавацца золотая оро lavazza oro"
-  },
-  "maccoffee": {
-   "subtitle": "Растворимый кофе · саше 20 г",
-   "image": "maccoffee.webp",
-   "imageRatio": 0.8,
-   "facts": [
-    "Классика в одно касание",
-    "Кофе, сливки и сахар",
-    "Просто залей водой"
-   ],
-   "keywords": "маккофе мак кофе maccoffee 3в1"
-  },
-  "MENU-CLASSIC-01": {
-   "color": "#b9825a"
-  },
-  "MENU-CLASSIC-02": {
-   "color": "#d1a67c"
-  },
-  "MENU-CLASSIC-03": {
-   "color": "#e3c29a"
-  },
-  "MENU-CLASSIC-04": {
-   "color": "#b57d52"
-  },
-  "MENU-CLASSIC-05": {
-   "color": "#2a170d",
-   "rowBreak": true
-  },
-  "MENU-CLASSIC-06": {
-   "color": "#3b2214"
-  },
-  "MENU-CLASSIC-07": {
-   "color": "#4a2c1a"
-  },
-  "MENU-CLASSIC-08": {
-   "color": "#5a341d"
-  },
-  "MENU-CLASSIC-09": {
-   "color": "#6a3b24",
-   "rowBreak": true
-  },
-  "MENU-CLASSIC-10": {
-   "color": "#7a4a32"
-  },
-  "MENU-CLASSIC-11": {
-   "color": "#4b2a1b"
-  },
-  "MENU-CLASSIC-12": {
-   "color": "#3a2015",
-   "note": "Регион Кот-д’Ивуар"
-  },
-  "MENU-CLASSIC-13": {
-   "color": "#8fbf5a",
-   "rowBreak": true,
-   "note": "Зелёная или голубая"
-  },
-  "MENU-AUTHOR-01": {
-   "color": "#c9b3e6"
-  },
-  "MENU-AUTHOR-02": {
-   "color": "#efe3cf"
-  },
-  "MENU-AUTHOR-03": {
-   "color": "#c89a62"
-  },
-  "MENU-AUTHOR-04": {
-   "color": "#e8d3b0",
-   "rowBreak": true
-  },
-  "MENU-AUTHOR-05": {
-   "color": "#c18f5a"
-  },
-  "MENU-AUTHOR-06": {
-   "color": "#d9923a",
-   "rowBreak": true
-  },
-  "MENU-COLD-01": {
-   "color": "#8fbf5a"
-  },
-  "MENU-COLD-02": {
-   "color": "#d1a67c"
-  },
-  "MENU-COLD-03": {
-   "color": "#cdb08a"
-  },
-  "MENU-COLD-04": {
-   "color": "#6a3b24",
-   "rowBreak": true
-  },
-  "MENU-COLD-05": {
-   "color": "#c2335a"
-  },
-  "MENU-COLD-06": {
-   "color": "#e0a040",
-   "rowBreak": true
-  },
-  "MENU-COLD-07": {
-   "color": "#f1dc7a"
-  },
-  "MENU-COLD-08": {
-   "color": "#3b2214",
-   "rowBreak": true
-  },
-  "MENU-COLD-09": {
-   "color": "#d9c3a0"
-  },
-  "MENU-COLD-10": {
-   "color": "#c9a37a"
-  },
-  "MENU-TEA-01": {
-   "color": "#f0a030"
-  },
-  "MENU-TEA-02": {
-   "color": "#d6335a"
-  },
-  "MENU-TEA-03": {
-   "color": "#9bbf5a"
-  },
-  "MENU-TEA-04": {
-   "color": "#7aa04a"
-  },
-  "MENU-TEA-05": {
-   "color": "#b5733a",
-   "rowBreak": true
-  },
-  "MENU-TEA-06": {
-   "color": "#c97d3a",
-   "note": "Соберите свой чай"
-  },
-  "MENU-TEA-07": {
-   "color": "#e8a050",
-   "rowBreak": true
-  },
-  "MENU-LEMONADE-01": {
-   "color": "#4fb0f0"
-  },
-  "MENU-LEMONADE-02": {
-   "color": "#e0507a"
-  },
-  "MENU-LEMONADE-03": {
-   "color": "#8a4fc0"
-  },
-  "MENU-LEMONADE-04": {
-   "color": "#8fe08a",
-   "rowBreak": true
-  },
-  "MENU-LEMONADE-05": {
-   "color": "#f0b84a"
-  }
- }
 }

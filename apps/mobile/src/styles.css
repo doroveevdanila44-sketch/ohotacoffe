@@ -711,3 +711,15 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 /* значок количества: фиолетовый с белой цифрой и белой ободкой, читается и на зелёной активной вкладке */
 .badge{background:var(--v);color:#fff;font-size:11.5px;font-weight:800;line-height:1;min-width:20px;height:20px;padding:0 5px;box-shadow:0 0 0 2px var(--bg)}
 .tabbar .badge{top:1px;right:calc(50% - 28px);border:2px solid #fff;box-shadow:0 2px 6px rgba(60,30,120,.28)}
+
+/* запас снизу: последний блок на ~24 пт выше нижней панели (панель 66 + отступ 14 + безопасная зона) */
+.mach,.cat,.bw,.feed{padding-bottom:calc(var(--sab) + 104px)}
+@media (max-height:700px){.mach,.cat,.bw,.feed{padding-bottom:calc(var(--sab) + 94px)}}
+
+/* карточка товара: особенности списком после описания */
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.facts span{padding:7px 12px;border-radius:14px;background:color-mix(in srgb,var(--v) 10%,#fff);color:var(--v);font-size:13.5px;font-weight:700}
+
+/* кружка в корзине без фона и плитки */
+.ci .mug{background:none;width:56px;height:56px;border-radius:0;overflow:visible}
+.ci .mug img{width:56px;height:56px;object-fit:contain;filter:drop-shadow(0 4px 6px rgba(40,20,70,.18))}

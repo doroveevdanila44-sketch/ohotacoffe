@@ -1,5 +1,6 @@
-// Проверка вёрстки на линейке iPhone и Android (размеры, вырезы, режим «Домой»).
-// Запуск: поднять сервер и npm run preview -w @kbs/mobile, затем node apps/mobile/scripts/layout-check.mjs (нужен playwright).
+// Вёрстка на 27 размерах экранов: iPhone, Android, складные, планшет, режим «Домой».
+// Проверяет: приложение и заставка на весь экран, положение панели, нет горизонтальной прокрутки,
+// цена и «В корзину» видны без прокрутки.
 import { createRequire } from 'node:module'; const { chromium } = createRequire(import.meta.url)('playwright');
 import fs from 'node:fs';
 // ширина, высота экрана, верх, низ (безопасные зоны), название
@@ -13,7 +14,7 @@ const D = [
   [344, 882, 32, 24, 'Z Fold обложка 344x882'], [673, 841, 32, 24, 'Z Fold внутр. 673x841'], [800, 1280, 24, 48, 'планшет 800x1280'],
   [852, 393, 24, 0, 'телефон альбомно 852x393'],
 ];
-const b = await chromium.launch(); const bad = []; fs.mkdirSync('/home/claude/work/shots/mx', { recursive: true });
+const b = await chromium.launch(); const bad = []; fs.mkdirSync((process.env.SHOTS_DIR ?? '/tmp/kbs-shots') + '/mx', { recursive: true });
 for (const [w, h, sat, sab, name] of D) {
   for (const standalone of (name.startsWith('Android') || name.startsWith('Pixel') || name.startsWith('Z Fold') || name.startsWith('планшет') || name.startsWith('телефон') ? [false] : [false, true])) {
     const vh = standalone && sat > 24 ? h - sat : h; // в режиме «Домой» iOS считает страницу короче экрана
@@ -23,7 +24,7 @@ for (const [w, h, sat, sab, name] of D) {
       if (st) Object.defineProperty(navigator, 'standalone', { get: () => true });
       document.addEventListener('DOMContentLoaded', () => { const s = document.createElement('style'); s.textContent = `:root{--safe-area-inset-top:${sat}px !important;--safe-area-inset-bottom:${sab}px !important}`; document.head.appendChild(s); });
     }, { st: standalone, sat, sab });
-    await p.goto('http://127.0.0.1:4173/'); await p.waitForTimeout(500);
+    await p.goto((process.env.WEB_URL ?? 'http://127.0.0.1:4173') + '/'); await p.waitForTimeout(500);
     const splashH = await p.evaluate(() => Math.round(document.querySelector('#splash').getBoundingClientRect().height));
     await p.waitForTimeout(3500);
     const res = {};
@@ -50,10 +51,11 @@ for (const [w, h, sat, sab, name] of D) {
     console.log((name + (standalone ? ' [Домой]' : ' [Safari]')).padEnd(34), `${w}x${h}`, problems.length ? '❌ ' + problems.join('; ') : '✓');
     if (problems.length) bad.push(name);
     if (true) {
-      for (const [tab, label] of [['coffee', 'Заказать кофе'], ['machine', 'Ремонт кофемашины'], ['home', 'Главная']]) { await p.evaluate((l) => document.querySelector(`.tabbar button[aria-label="${l}"]`).click(), label); await p.waitForTimeout(300); await p.screenshot({ path: `/home/claude/work/shots/mx/${w}x${h}-${tab}${standalone ? '-s' : ''}.png` }); }
+      for (const [tab, label] of [['coffee', 'Заказать кофе'], ['machine', 'Ремонт кофемашины'], ['home', 'Главная']]) { await p.evaluate((l) => document.querySelector(`.tabbar button[aria-label="${l}"]`).click(), label); await p.waitForTimeout(300); await p.screenshot({ path: `${process.env.SHOTS_DIR ?? '/tmp/kbs-shots'}/mx/${w}x${h}-${tab}${standalone ? '-s' : ''}.png` }); }
     }
     await ctx.close();
   }
 }
+if (bad.length) process.exitCode = 1;
 console.log(bad.length ? 'ПРОБЛЕМЫ: ' + [...new Set(bad)].join(', ') : 'ВСЕ УСТРОЙСТВА В ПОРЯДКЕ');
 await b.close();

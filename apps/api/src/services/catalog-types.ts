@@ -46,6 +46,8 @@ export interface CategoryRule {
 export interface ProductExtras {
   title?: string;
   subtitle?: string;
+  /** Описание для карточки товара, если в 1С оно не заполнено. */
+  description?: string;
   image?: string;
   imageRatio?: number;
   facts?: string[];

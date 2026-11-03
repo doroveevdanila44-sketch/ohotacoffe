@@ -1,0 +1,27 @@
+name: Проверка
+
+# Запускается при каждой отправке и в каждом запросе на слияние.
+# Если проверка красная, в боевую ветку это отправлять нельзя.
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Типы
+        run: npm run typecheck
+      - name: Тесты сервера
+        run: npm test
+      - name: Браузер для проверки вёрстки
+        run: npx playwright install --with-deps chromium
+      - name: Вёрстка на iPhone и Android
+        run: npm run check:layout

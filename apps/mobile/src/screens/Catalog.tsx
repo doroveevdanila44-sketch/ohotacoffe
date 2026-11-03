@@ -76,10 +76,13 @@ export function ProductPanel({ id }: { id: string | null }) {
   const add = useCart((s) => s.add);
   const setQty = useCart((s) => s.setQty);
   const p = data?.products.find((x) => x.id === id);
+  const simpleQty = p ? (lines.find((l) => l.key === `${p.id}|`)?.qty ?? 0) : 0;
+  // Особенности, которых нет в тексте описания, показываем плашками, чтобы не дублировать.
+  const extraFacts = p ? p.facts.filter((f) => !p.description.includes(f)) : [];
   const samePrice = p ? p.variants.every((v) => v.price === p.variants[0]?.price) : false;
 
   return (
-    <Panel open={!!id} title={p?.title ?? ''} onBack={() => close('product')} label="Выбор варианта">
+    <Panel open={!!id} title={p?.title ?? ''} onBack={() => close('product')} label="Карточка товара">
       {p ? (
         <>
           {p.image ? (
@@ -88,24 +91,18 @@ export function ProductPanel({ id }: { id: string | null }) {
             </div>
           ) : null}
           <div className="box bp">
-            <b>{samePrice ? money(p.variants[0]?.price ?? p.price) : `от ${money(p.price)}`}</b>
+            <b>{!p.hasVariants ? money(p.price) : samePrice ? money(p.variants[0]?.price ?? p.price) : `от ${money(p.price)}`}</b>
             <span>
-              {samePrice ? 'за любой вкус' : 'цена зависит от варианта'}
+              {!p.hasVariants ? null : samePrice ? 'за любой вкус' : 'цена зависит от варианта'}
               {p.subtitle ? (
                 <>
-                  <br />
+                  {p.hasVariants ? <br /> : null}
                   {p.subtitle}
                 </>
               ) : null}
             </span>
           </div>
-          {p.description ? (
-            <div className="box">
-              <p className="fe" style={{ margin: 0 }}>
-                {p.description}
-              </p>
-            </div>
-          ) : null}
+          {p.hasVariants ? (
           <div className="box">
             {p.variants.map((v) => {
               const key = [p.id, v.id].join('|');
@@ -134,6 +131,46 @@ export function ProductPanel({ id }: { id: string | null }) {
               );
             })}
           </div>
+          ) : (
+            <div className="box">
+              <div className="fl" style={{ padding: 0 }}>
+                <div className="n">
+                  {p.stock === 0 ? 'Нет в наличии' : 'В корзину'}
+                  {p.stock != null && p.stock > 0 && p.stock <= 5 ? <small>Осталось {p.stock} шт.</small> : null}
+                </div>
+                {p.stock === 0 && !simpleQty ? null : (
+                  <Stepper
+                    qty={simpleQty}
+                    onChange={(d) => {
+                      if (d > 0) {
+                        if (p.stock != null && simpleQty >= p.stock) return toast(`В наличии ${p.stock} шт.`);
+                        add({ productId: p.id, variantId: null, modifiers: [], title: p.title });
+                        tap();
+                        toast('Добавлено в корзину');
+                      } else setQty(`${p.id}|`, simpleQty - 1);
+                    }}
+                  />
+                )}
+              </div>
+            </div>
+          )}
+          {p.description || extraFacts.length ? (
+            <div className="box">
+              <h3>О товаре</h3>
+              {p.description ? (
+                <p className="fe" style={{ margin: 0, color: 'var(--ink)', fontSize: 15, lineHeight: 1.45 }}>
+                  {p.description}
+                </p>
+              ) : null}
+              {extraFacts.length ? (
+                <div className="facts">
+                  {extraFacts.map((f) => (
+                    <span key={f}>{f}</span>
+                  ))}
+                </div>
+              ) : null}
+            </div>
+          ) : null}
         </>
       ) : null}
     </Panel>

@@ -34,12 +34,8 @@ function Card({ p, i }: { p: Product; i: number }) {
   };
 
   return (
-    <article className="card" style={{ animationDelay: `${Math.min(i, 12) * 60}ms` }}>
-      <div
-        className={`ph${p.image ? '' : ' noimg'}`}
-        style={p.image ? { aspectRatio: String(p.imageRatio ?? 0.8) } : undefined}
-        onClick={() => p.hasVariants && open({ type: 'product', id: p.id })}
-      >
+    <article className="card" style={{ animationDelay: `${Math.min(i, 12) * 60}ms`, cursor: 'pointer' }} onClick={() => open({ type: 'product', id: p.id })}>
+      <div className={`ph${p.image ? '' : ' noimg'}`} style={p.image ? { aspectRatio: String(p.imageRatio ?? 0.8) } : undefined}>
         {p.image ? <img src={p.image} alt={p.title} loading="lazy" draggable={false} /> : 'Охота кофе'}
         {disc ? <span className="disc">-{disc}%</span> : null}
         {soldOut ? <span className="oos">Нет в наличии</span> : null}
