@@ -768,3 +768,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 .bon .bon-sub{margin:4px 0 0;font-size:14px;color:rgba(255,255,255,.85)}
 .bon .cups{padding-top:6px}
 .fi:disabled{opacity:1;color:var(--muted);background:rgba(0,0,0,.04);-webkit-text-fill-color:var(--muted)}
+
+/* Карточка товара: фото целиком, подстраивается под свои пропорции */
+.bimg{background:none}
+.bimg img{width:100%;height:auto;aspect-ratio:auto;max-height:68dvh;object-fit:contain;background:#e7e4ea}
