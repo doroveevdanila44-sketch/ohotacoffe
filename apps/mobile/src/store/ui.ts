@@ -21,6 +21,8 @@ interface Ui {
   /** Открыть заказ из ссылки (возврат из оплаты, push). */
   focusOrderId: string | null;
   repairStep: 'form' | 'est' | 'track';
+  splash: boolean;
+  setSplash: (v: boolean) => void;
   setRepairStep: (s: 'form' | 'est' | 'track') => void;
   setTab: (t: Tab) => void;
   open: (o: Overlay) => void;
@@ -40,6 +42,8 @@ export const useUi = create<Ui>()((set) => ({
   afterLogin: null,
   focusOrderId: null,
   repairStep: 'form',
+  splash: true,
+  setSplash: (splash) => set({ splash }),
   setRepairStep: (repairStep) => set({ repairStep }),
   setTab: (tab) => set((s) => ({ tab, tabNonce: s.tabNonce + 1, overlays: [] })),
   open: (o) => set((s) => ({ overlays: [...s.overlays.filter((x) => x.type !== o.type), o] })),

@@ -53,6 +53,7 @@ export function Splash({ ready, onDone }: { ready: boolean; onDone: () => void }
   }, [ready, minPassed]);
   useEffect(() => {
     if (!hide) return;
+    useUi.getState().setSplash(false);
     onDone();
     const t = setTimeout(() => setGone(true), 700);
     return () => clearTimeout(t);
@@ -89,15 +90,40 @@ const GREEN = '#8bcb45';
 const VIOLET = '#7b4fd6';
 const GREY = '#f3f3f5';
 
-/** Цвет верхней части экрана (у динамика и острова) совпадает с цветом шапки текущего экрана. */
+/**
+ * Цвет верхней части экрана (у динамика и острова) совпадает с тем, что сейчас под ней:
+ * на заставке зелёный, у шапки экрана цвет шапки, после прокрутки цвет фона экрана.
+ */
 export function SystemBar() {
   const tab = useUi((s) => s.tab);
   const step = useUi((s) => s.repairStep);
-  const color = tab === 'coffee' ? GREEN : tab === 'machine' ? (step === 'form' ? VIOLET : GREEN) : GREY;
+  const splash = useUi((s) => s.splash);
+  const [over, setOver] = useState(false);
+
+  useEffect(() => {
+    setOver(false);
+    const check = (el: Element | null) => {
+      const hero = el?.querySelector('.cfhero, .rhero');
+      const bar = document.querySelector('.sysbar') as HTMLElement | null;
+      if (!hero || !bar) return setOver(false);
+      setOver(hero.getBoundingClientRect().bottom <= bar.offsetHeight + 1);
+    };
+    const onScroll = (e: Event) => {
+      const el = e.target as HTMLElement;
+      if (el.classList?.contains('screen') && el.classList.contains('active')) check(el);
+    };
+    document.addEventListener('scroll', onScroll, { capture: true, passive: true });
+    check(document.querySelector('.screen.active'));
+    return () => document.removeEventListener('scroll', onScroll, { capture: true });
+  }, [tab, step]);
+
+  let color = GREY;
+  if (splash) color = GREEN;
+  else if (tab === 'coffee') color = over ? VIOLET : GREEN;
+  else if (tab === 'machine') color = step === 'form' ? (over ? GREEN : VIOLET) : GREEN;
+
   useEffect(() => {
     document.documentElement.style.setProperty('--top', color);
-    document.documentElement.style.backgroundColor = color;
-    document.body.style.backgroundColor = color;
     document.querySelector('meta[name="theme-color"]')?.setAttribute('content', color);
   }, [color]);
   return <div className="sysbar" aria-hidden="true" />;
