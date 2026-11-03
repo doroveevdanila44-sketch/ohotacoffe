@@ -3,8 +3,13 @@
   "private": true,
   "version": "1.0.0",
   "description": "Охота кофе / Камбаршоп: мобильное приложение (iOS, Android) и сервер с интеграцией 1С",
-  "workspaces": ["packages/*", "apps/*"],
-  "engines": { "node": ">=22" },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "npm run dev -w @kbs/api & npm run dev -w @kbs/mobile",
     "build": "npm run build -w @kbs/shared && npm run build -w @kbs/api && npm run build -w @kbs/mobile",

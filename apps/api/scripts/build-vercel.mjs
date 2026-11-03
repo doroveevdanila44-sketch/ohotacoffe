@@ -6,7 +6,9 @@ import { resolve } from 'node:path';
 
 const root = resolve(fileURLToPath(new URL('../../..', import.meta.url)));
 const pkg = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8'));
-const external = Object.keys(pkg.dependencies).filter((d) => d !== '@kbs/shared');
+// Вшиваем всё, кроме баз данных: PGlite хранит рядом файлы wasm, pg подключается только при DATABASE_URL.
+void pkg;
+const external = ['@electric-sql/pglite', 'pg', 'pg-native'];
 
 await build({
   entryPoints: [resolve(root, 'apps/api/src/vercel.ts')],
