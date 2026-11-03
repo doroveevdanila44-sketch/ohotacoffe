@@ -662,3 +662,10 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
   .rhero img{max-height:24vh}
   .cfhero{padding-bottom:10px}
 }
+
+/* верхний блок начинается от самого края экрана, отступ до заголовка считается один раз */
+.cfhero{margin-top:calc(-1 * (var(--sat) + 18px));padding-top:calc(var(--sat) + 26px)}
+.rhero{margin-top:calc(-1 * (var(--sat) + 18px));padding-top:calc(var(--sat) + 26px)}
+@media (max-height:700px){
+  .cfhero,.rhero{padding-top:calc(var(--sat) + 16px)}
+}
