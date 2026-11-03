@@ -723,3 +723,6 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 /* кружка в корзине без фона и плитки */
 .ci .mug{background:none;width:56px;height:56px;border-radius:0;overflow:visible}
 .ci .mug img{width:56px;height:56px;object-fit:contain;filter:drop-shadow(0 4px 6px rgba(40,20,70,.18))}
+
+/* Кружка в корзине: показываем картинку как есть, без теней и подложки */
+.ci .mug,.ci .mug img{background:none;box-shadow:none;filter:none;border:0}
