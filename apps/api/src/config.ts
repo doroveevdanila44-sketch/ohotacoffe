@@ -44,6 +44,8 @@ const EnvSchema = z.object({
 
   /* ---------- SMS ---------- */
   SMS_PROVIDER: z.enum(['console', 'smsru']).default('console'),
+  /** Только для демо: вход одним запросом под выдуманным пользователем. В бою выключен. */
+  DEMO_LOGIN: z.enum(['0', '1']).default('0'),
   SMSRU_API_ID: z.string().default(''),
   SMS_SENDER: z.string().default(''),
   /** Номера для проверки App Store / Google Play: код всегда 0000. Через запятую. */
@@ -68,7 +70,7 @@ const EnvSchema = z.object({
     .default(
       '[{"id":"shop","title":"Магазин","address":"пер. имени Заварицкого А.Н., 11, строение 8","hours":"Пн–Пт 10:00–18:00, Сб 11:00–16:00, Вс выходной"},{"id":"coffee","title":"Чайная лавка и кофейня","address":"ул. Топоркова, 8, ТЦ «Армат Центр», модуль 1, линия 3","hours":"Пн–Вс 9:00–20:00"}]',
     ),
-  SUPPORT_PHONE: z.string().default('+7 900 689-18-24'),
+  SUPPORT_PHONE: z.string().default('+7 991 393-44-03'),
   WORKING_HOURS: z.string().default('Магазин: Пн–Пт 10:00–18:00, Сб 11:00–16:00, Вс выходной. Кофейня: ежедневно 9:00–20:00'),
   LEGAL_OPERATOR: z.string().default('[Наименование оператора, ИНН, ОГРНИП/ОГРН]'),
   LEGAL_EMAIL: z.string().default('[email для обращений]'),

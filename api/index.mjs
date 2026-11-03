@@ -75265,6 +75265,7 @@ async function importPKCS8(pkcs8, alg, options) {
 var CODE_TTL_MS = 5 * 6e4;
 var RESEND_AFTER_MS = 6e4;
 var MAX_ATTEMPTS = 5;
+var DEMO_USER = { id: "00000000-0000-4000-8000-000000000001", phone: "+79145550123", name: "\u041E\u043B\u0435\u0433" };
 var AuthError = class extends Error {
   constructor(message2, statusCode = 400) {
     super(message2);
@@ -75327,11 +75328,22 @@ var AuthService = class {
     const token = await new SignJWT({ phone }).setProtectedHeader({ alg: "HS256" }).setSubject(user.id).setIssuedAt().setExpirationTime("90d").sign(this.key);
     return { token, userId: user.id, isNew };
   }
+  /** Демо: гарантирует, что выдуманный пользователь есть в базе (функции на Vercel не делят память). */
+  async ensureDemoUser() {
+    await this.db.insert(users).values({ id: DEMO_USER.id, phone: DEMO_USER.phone, name: DEMO_USER.name, consentAt: /* @__PURE__ */ new Date() }).onConflictDoNothing();
+  }
+  async demoLogin() {
+    if (this.cfg.DEMO_LOGIN !== "1") throw new AuthError("\u041D\u0435\u0434\u043E\u0441\u0442\u0443\u043F\u043D\u043E", 404);
+    await this.ensureDemoUser();
+    const token = await new SignJWT({ phone: DEMO_USER.phone }).setProtectedHeader({ alg: "HS256" }).setSubject(DEMO_USER.id).setIssuedAt().setExpirationTime("90d").sign(this.key);
+    return { token, userId: DEMO_USER.id };
+  }
   /** Возвращает id пользователя или null. Удалённый пользователь не проходит. */
   async verifyToken(token) {
     try {
       const { payload } = await jwtVerify(token, this.key, { algorithms: ["HS256"] });
       if (!payload.sub) return null;
+      if (this.cfg.DEMO_LOGIN === "1" && payload.sub === DEMO_USER.id) await this.ensureDemoUser();
       const [u] = await this.db.select({ id: users.id, phone: users.phone }).from(users).where(eq(users.id, payload.sub));
       return u ? { userId: u.id, phone: u.phone } : null;
     } catch {
@@ -76616,6 +76628,9 @@ function userRoutes(app, deps) {
     const body = verifyCodeSchema.parse(req.body);
     return auth.verifyCode(body.phone, body.code);
   });
+  if (deps.cfg.DEMO_LOGIN === "1") {
+    app.post("/v1/demo/login", async () => auth.demoLogin());
+  }
   app.get("/v1/me", authed, async (req) => {
     const [u] = await db.select().from(users).where(eq(users.id, req.user.userId));
     return { id: u.id, phone: u.phone, name: u.name, city: u.city, bonus: await bonusFor(u.phone) };
@@ -76803,6 +76818,8 @@ var EnvSchema = external_exports.object({
   YOOKASSA_VAT_CODE: external_exports.coerce.number().int().default(1),
   /* ---------- SMS ---------- */
   SMS_PROVIDER: external_exports.enum(["console", "smsru"]).default("console"),
+  /** Только для демо: вход одним запросом под выдуманным пользователем. В бою выключен. */
+  DEMO_LOGIN: external_exports.enum(["0", "1"]).default("0"),
   SMSRU_API_ID: external_exports.string().default(""),
   SMS_SENDER: external_exports.string().default(""),
   /** Номера для проверки App Store / Google Play: код всегда 0000. Через запятую. */
@@ -76822,7 +76839,7 @@ var EnvSchema = external_exports.object({
   PICKUP_POINTS: external_exports.string().default(
     '[{"id":"shop","title":"\u041C\u0430\u0433\u0430\u0437\u0438\u043D","address":"\u043F\u0435\u0440. \u0438\u043C\u0435\u043D\u0438 \u0417\u0430\u0432\u0430\u0440\u0438\u0446\u043A\u043E\u0433\u043E \u0410.\u041D., 11, \u0441\u0442\u0440\u043E\u0435\u043D\u0438\u0435 8","hours":"\u041F\u043D\u2013\u041F\u0442 10:00\u201318:00, \u0421\u0431 11:00\u201316:00, \u0412\u0441 \u0432\u044B\u0445\u043E\u0434\u043D\u043E\u0439"},{"id":"coffee","title":"\u0427\u0430\u0439\u043D\u0430\u044F \u043B\u0430\u0432\u043A\u0430 \u0438 \u043A\u043E\u0444\u0435\u0439\u043D\u044F","address":"\u0443\u043B. \u0422\u043E\u043F\u043E\u0440\u043A\u043E\u0432\u0430, 8, \u0422\u0426 \xAB\u0410\u0440\u043C\u0430\u0442 \u0426\u0435\u043D\u0442\u0440\xBB, \u043C\u043E\u0434\u0443\u043B\u044C 1, \u043B\u0438\u043D\u0438\u044F 3","hours":"\u041F\u043D\u2013\u0412\u0441 9:00\u201320:00"}]'
   ),
-  SUPPORT_PHONE: external_exports.string().default("+7 900 689-18-24"),
+  SUPPORT_PHONE: external_exports.string().default("+7 991 393-44-03"),
   WORKING_HOURS: external_exports.string().default("\u041C\u0430\u0433\u0430\u0437\u0438\u043D: \u041F\u043D\u2013\u041F\u0442 10:00\u201318:00, \u0421\u0431 11:00\u201316:00, \u0412\u0441 \u0432\u044B\u0445\u043E\u0434\u043D\u043E\u0439. \u041A\u043E\u0444\u0435\u0439\u043D\u044F: \u0435\u0436\u0435\u0434\u043D\u0435\u0432\u043D\u043E 9:00\u201320:00"),
   LEGAL_OPERATOR: external_exports.string().default("[\u041D\u0430\u0438\u043C\u0435\u043D\u043E\u0432\u0430\u043D\u0438\u0435 \u043E\u043F\u0435\u0440\u0430\u0442\u043E\u0440\u0430, \u0418\u041D\u041D, \u041E\u0413\u0420\u041D\u0418\u041F/\u041E\u0413\u0420\u041D]"),
   LEGAL_EMAIL: external_exports.string().default("[email \u0434\u043B\u044F \u043E\u0431\u0440\u0430\u0449\u0435\u043D\u0438\u0439]")
@@ -76858,6 +76875,7 @@ function getApp() {
       MEDIA_BASE_URL: "/media",
       CATALOG_CONFIG: "apps/api/config/catalog.json",
       SMS_PROVIDER: "console",
+      DEMO_LOGIN: "1",
       JWT_SECRET: process.env.JWT_SECRET ?? "demo-secret-change-me-demo-secret-change-me"
     });
     return buildApp({ cfg, logger: { level: "warn" }, background: false });

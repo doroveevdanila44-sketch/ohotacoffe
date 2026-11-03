@@ -22,6 +22,7 @@ function getApp() {
       MEDIA_BASE_URL: '/media',
       CATALOG_CONFIG: 'apps/api/config/catalog.json',
       SMS_PROVIDER: 'console',
+      DEMO_LOGIN: '1',
       JWT_SECRET: process.env.JWT_SECRET ?? 'demo-secret-change-me-demo-secret-change-me',
     } as NodeJS.ProcessEnv);
     return buildApp({ cfg, logger: { level: 'warn' }, background: false });

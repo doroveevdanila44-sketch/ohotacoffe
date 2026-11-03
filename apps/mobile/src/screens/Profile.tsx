@@ -142,10 +142,12 @@ export function Profile({ active }: { active: boolean }) {
           {favItems.length ? (
             favItems.map((p) => (
               <div className="fv" key={p.id}>
-                {p.image ? <img src={p.image} alt="" /> : null}
-                <div className="n">
-                  {p.title}
-                  <small>{money(p.price)}</small>
+                <div className="fvo" role="button" tabIndex={0} onClick={() => open({ type: 'product', id: p.id })} onKeyDown={(e) => e.key === 'Enter' && open({ type: 'product', id: p.id })}>
+                  {p.image ? <img src={p.image} alt="" /> : null}
+                  <div className="n">
+                    {p.title}
+                    <small>{money(p.price)}</small>
+                  </div>
                 </div>
                 <button aria-label="Убрать из избранного" onClick={() => toggleFav(p.id)}>
                   <Icon name="heart" />
@@ -165,9 +167,7 @@ export function Profile({ active }: { active: boolean }) {
             <button className="rw" onClick={() => openUrl(telHref(settings.supportPhone))}>
               <span>
                 Позвонить нам
-                <small>
-                  {settings.supportPhone} · {settings.workingHours}
-                </small>
+                <small>{settings.supportPhone}</small>
               </span>
               <Icon name="phone" />
             </button>

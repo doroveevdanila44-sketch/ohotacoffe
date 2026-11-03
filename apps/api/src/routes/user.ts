@@ -43,6 +43,10 @@ export function userRoutes(app: FastifyInstance, deps: AppDeps) {
     return auth.verifyCode(body.phone, body.code);
   });
 
+  if (deps.cfg.DEMO_LOGIN === '1') {
+    app.post('/v1/demo/login', async () => auth.demoLogin());
+  }
+
   /* ---------- профиль ---------- */
   app.get('/v1/me', authed, async (req): Promise<User> => {
     const [u] = await db.select().from(users).where(eq(users.id, req.user!.userId));

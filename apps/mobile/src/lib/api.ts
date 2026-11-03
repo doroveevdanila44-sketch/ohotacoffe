@@ -18,11 +18,8 @@ export const DEMO = import.meta.env.VITE_DEMO === '1';
 let demoPending: Promise<void> | null = null;
 export function demoLogin(): Promise<void> {
   demoPending ??= (async () => {
-    const phone = '+79145550123';
-    const r = await api<{ devCode?: string }>('/v1/auth/request-code', { method: 'POST', body: { phone, consent: true }, noRetry: true });
-    const v = await api<{ token: string }>('/v1/auth/verify', { method: 'POST', body: { phone, code: r.devCode ?? '0000' }, noRetry: true });
-    useSession.getState().setAuth(v.token, phone);
-    await api('/v1/me', { method: 'PATCH', body: { name: 'Олег' }, noRetry: true });
+    const v = await api<{ token: string }>('/v1/demo/login', { method: 'POST', noRetry: true });
+    useSession.getState().setAuth(v.token, '+79145550123');
   })().finally(() => {
     demoPending = null;
   });
