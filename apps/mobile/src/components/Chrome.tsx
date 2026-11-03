@@ -55,7 +55,7 @@ export function Splash({ ready, onDone }: { ready: boolean; onDone: () => void }
     if (!hide) return;
     useUi.getState().setSplash(false);
     onDone();
-    const t = setTimeout(() => setGone(true), 700);
+    const t = setTimeout(() => setGone(true), 250);
     return () => clearTimeout(t);
   }, [hide]); // eslint-disable-line react-hooks/exhaustive-deps
   if (gone) return null;

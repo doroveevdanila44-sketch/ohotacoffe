@@ -616,3 +616,7 @@ body.kb .tabbar{display:none}
 
 /* экраны переключаются мгновенно, без проявления: цвет верхней полосы меняется в том же кадре */
 .screen{transition:none}
+
+/* заставка исчезает быстро: зелёный верх не задерживается над главной */
+#splash{transition:opacity .18s ease}
+#splash.hide{transform:none}
