@@ -1,0 +1,86 @@
+import { useEffect, useState } from 'react';
+import { Icon, type IconName } from './Icons';
+import { cartCount, useCart } from '../store/cart';
+import { useUi, type Tab } from '../store/ui';
+import { tap } from '../lib/native';
+
+const TABS: { id: Tab; icon: IconName; label: string }[] = [
+  { id: 'home', icon: 'home', label: 'Главная' },
+  { id: 'catalog', icon: 'grid', label: 'Каталог' },
+  { id: 'coffee', icon: 'cup', label: 'Заказать кофе' },
+  { id: 'machine', icon: 'mach', label: 'Ремонт кофемашины' },
+  { id: 'cart', icon: 'bag', label: 'Корзина' },
+  { id: 'profile', icon: 'user', label: 'Профиль' },
+];
+
+export function TabBar() {
+  const tab = useUi((s) => s.tab);
+  const setTab = useUi((s) => s.setTab);
+  const n = useCart((s) => cartCount(s.lines));
+  return (
+    <nav className="tabbar" aria-label="Навигация">
+      {TABS.map((t) => (
+        <button
+          key={t.id}
+          className={tab === t.id ? 'on' : ''}
+          aria-label={t.label}
+          aria-current={tab === t.id ? 'page' : undefined}
+          onClick={() => {
+            if (tab !== t.id) tap();
+            setTab(t.id);
+          }}
+        >
+          <Icon name={t.icon} />
+          {t.id === 'cart' ? <i className={`badge${n ? ' on' : ''}`}>{n}</i> : null}
+        </button>
+      ))}
+    </nav>
+  );
+}
+
+/** Заставка «Охота кофе»: зелёный верх, фиолетовый низ, полоса загрузки. */
+export function Splash({ ready, onDone }: { ready: boolean; onDone: () => void }) {
+  const [minPassed, setMinPassed] = useState(false);
+  const [hide, setHide] = useState(false);
+  const [gone, setGone] = useState(false);
+  useEffect(() => {
+    const t = setTimeout(() => setMinPassed(true), 1600);
+    const max = setTimeout(() => setHide(true), 6000);
+    return () => (clearTimeout(t), clearTimeout(max));
+  }, []);
+  useEffect(() => {
+    if (ready && minPassed) setHide(true);
+  }, [ready, minPassed]);
+  useEffect(() => {
+    if (!hide) return;
+    onDone();
+    const t = setTimeout(() => setGone(true), 700);
+    return () => clearTimeout(t);
+  }, [hide]); // eslint-disable-line react-hooks/exhaustive-deps
+  if (gone) return null;
+  return (
+    <div id="splash" className={hide ? 'hide' : ''} aria-label="Охота кофе" onClick={() => minPassed && setHide(true)}>
+      <div className="top" />
+      <div className="word">
+        Охота
+        <br />
+        кофе
+      </div>
+      <div className="bar">
+        <i />
+      </div>
+    </div>
+  );
+}
+
+export function OfflineBadge() {
+  const [off, setOff] = useState(!navigator.onLine);
+  useEffect(() => {
+    const on = () => setOff(false);
+    const of = () => setOff(true);
+    window.addEventListener('online', on);
+    window.addEventListener('offline', of);
+    return () => (window.removeEventListener('online', on), window.removeEventListener('offline', of));
+  }, []);
+  return off ? <div className="offline">Нет интернета</div> : null;
+}

@@ -1,0 +1,75 @@
+{
+  "items": {
+    "entity": "Catalog_Номенклатура",
+    "fields": {
+      "ref": "Ref_Key",
+      "code": "Code",
+      "title": "Description",
+      "parent": "Parent_Key",
+      "isFolder": "IsFolder",
+      "deleted": "DeletionMark",
+      "article": "Артикул",
+      "description": "Описание"
+    },
+    "rootGroupRefs": [],
+    "characteristicsOwnerField": "ВидНоменклатуры_Key"
+  },
+  "characteristics": {
+    "enabled": true,
+    "entity": "Catalog_ХарактеристикиНоменклатуры",
+    "fields": { "ref": "Ref_Key", "title": "Description", "owner": "Владелец", "deleted": "DeletionMark" }
+  },
+  "prices": {
+    "entity": "InformationRegister_ЦеныНоменклатуры",
+    "sliceLast": true,
+    "priceTypeField": "ВидЦены_Key",
+    "priceTypeRef": "00000000-0000-0000-0000-000000000000",
+    "fields": { "item": "Номенклатура_Key", "char": "Характеристика_Key", "price": "Цена" }
+  },
+  "stock": {
+    "enabled": true,
+    "entity": "AccumulationRegister_ТоварыНаСкладах",
+    "warehouseField": "Склад_Key",
+    "warehouseRefs": [],
+    "fields": { "item": "Номенклатура_Key", "char": "Характеристика_Key", "qty": "ВНаличииBalance" }
+  },
+  "order": {
+    "enabled": true,
+    "entity": "Document_ЗаказКлиента",
+    "post": false,
+    "linesField": "Товары",
+    "template": {
+      "Date": "{{date}}",
+      "Организация_Key": "00000000-0000-0000-0000-000000000000",
+      "Партнер_Key": "00000000-0000-0000-0000-000000000000",
+      "Контрагент_Key": "00000000-0000-0000-0000-000000000000",
+      "Соглашение_Key": "00000000-0000-0000-0000-000000000000",
+      "Склад_Key": "00000000-0000-0000-0000-000000000000",
+      "Валюта_Key": "00000000-0000-0000-0000-000000000000",
+      "ЦенаВключаетНДС": true,
+      "НомерПоДаннымКлиента": "{{number}}",
+      "СуммаДокумента": "{{total}}",
+      "Комментарий": "Приложение «Охота кофе», заказ {{number}}. {{deliveryType}}: {{address}}{{pickupPoint}}. Оплата: {{paymentMethod}}. Тел. {{phone}} {{customerName}}. {{comment}}"
+    },
+    "lineTemplate": {
+      "LineNumber": "{{lineNumber}}",
+      "Номенклатура_Key": "{{itemRef}}",
+      "Характеристика_Key": "{{charRef}}",
+      "Количество": "{{qty}}",
+      "КоличествоУпаковок": "{{qty}}",
+      "Цена": "{{price}}",
+      "Сумма": "{{sum}}",
+      "СуммаСНДС": "{{sum}}"
+    }
+  },
+  "repair": {
+    "enabled": false,
+    "entity": "Document_ЗаказКлиента",
+    "post": false,
+    "template": {
+      "Date": "{{date}}",
+      "НомерПоДаннымКлиента": "{{number}}",
+      "Комментарий": "Ремонт из приложения, заявка {{number}}. Модель: {{model}}. Неисправность: {{problem}}. Забрать: {{pickupAddress}}. Тел. {{phone}} {{customerName}}"
+    }
+  }
+}

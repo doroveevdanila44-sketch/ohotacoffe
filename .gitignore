@@ -1,0 +1,23 @@
+node_modules/
+dist/
+.data/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+coverage/
+
+# мобильное приложение
+apps/mobile/ios/App/App/public/
+apps/mobile/ios/App/App/capacitor.config.json
+apps/mobile/ios/App/App/config.xml
+apps/mobile/android/app/src/main/assets/public/
+apps/mobile/android/app/src/main/assets/capacitor.config.json
+apps/mobile/android/app/src/main/assets/capacitor.plugins.json
+apps/mobile/ios/App/App/GoogleService-Info.plist
+apps/mobile/android/app/google-services.json
+apps/mobile/android/keystore.properties
+*.jks
+*.keystore
+*.p8

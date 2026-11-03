@@ -1,0 +1,24 @@
+# Боевой запуск сервера с PostgreSQL. Настройки в apps/api/.env (образец: apps/api/.env.example).
+services:
+  db:
+    image: postgres:17-alpine
+    restart: always
+    environment:
+      POSTGRES_DB: kbs
+      POSTGRES_USER: kbs
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?задайте POSTGRES_PASSWORD}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    restart: always
+    env_file: apps/api/.env
+    environment:
+      DATABASE_URL: postgres://kbs:${POSTGRES_PASSWORD}@db:5432/kbs
+    depends_on: [db]
+    ports:
+      - "8080:8080"
+volumes:
+  pgdata:

@@ -1,0 +1,1600 @@
+{
+ "groups": [
+  {
+   "ref": "g-shop",
+   "code": "SHOP",
+   "parentRef": null,
+   "title": "Магазин"
+  },
+  {
+   "ref": "g-menu",
+   "code": "MENU",
+   "parentRef": null,
+   "title": "Кофейня"
+  },
+  {
+   "ref": "g-shop-ground",
+   "code": "SHOP-GROUND",
+   "parentRef": "g-shop",
+   "title": "Молотый кофе"
+  },
+  {
+   "ref": "g-shop-beans",
+   "code": "SHOP-BEANS",
+   "parentRef": "g-shop",
+   "title": "Кофе в зёрнах"
+  },
+  {
+   "ref": "g-shop-drip",
+   "code": "SHOP-DRIP",
+   "parentRef": "g-shop",
+   "title": "Дрип-кофе"
+  },
+  {
+   "ref": "g-shop-instant",
+   "code": "SHOP-INSTANT",
+   "parentRef": "g-shop",
+   "title": "Растворимый кофе"
+  },
+  {
+   "ref": "g-shop-tea",
+   "code": "SHOP-TEA",
+   "parentRef": "g-shop",
+   "title": "Чай"
+  },
+  {
+   "ref": "g-shop-syrups",
+   "code": "SHOP-SYRUPS",
+   "parentRef": "g-shop",
+   "title": "Сиропы"
+  },
+  {
+   "ref": "g-menu-classic",
+   "code": "MENU-CLASSIC",
+   "parentRef": "g-menu",
+   "title": "Классика"
+  },
+  {
+   "ref": "g-menu-author",
+   "code": "MENU-AUTHOR",
+   "parentRef": "g-menu",
+   "title": "Авторский кофе"
+  },
+  {
+   "ref": "g-menu-cold",
+   "code": "MENU-COLD",
+   "parentRef": "g-menu",
+   "title": "Холодные напитки"
+  },
+  {
+   "ref": "g-menu-tea",
+   "code": "MENU-TEA",
+   "parentRef": "g-menu",
+   "title": "Чай"
+  },
+  {
+   "ref": "g-menu-lemonade",
+   "code": "MENU-LEMONADE",
+   "parentRef": "g-menu",
+   "title": "Лимонады"
+  },
+  {
+   "ref": "g-menu-addons",
+   "code": "MENU-ADDONS",
+   "parentRef": "g-menu",
+   "title": "Добавки"
+  }
+ ],
+ "items": [
+  {
+   "ref": "it-lavazza",
+   "code": "lavazza",
+   "article": null,
+   "title": "Lavazza Tales of Roma",
+   "groupRef": "g-shop-ground",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-tasty",
+   "code": "tasty",
+   "article": null,
+   "title": "Tasty Coffee Drip «Бэрри»",
+   "groupRef": "g-shop-drip",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-lavrossa",
+   "code": "lavrossa",
+   "article": null,
+   "title": "Lavazza Qualità Rossa",
+   "groupRef": "g-shop-ground",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-sbmix",
+   "code": "sbmix",
+   "article": null,
+   "title": "Starbucks Premium Mix",
+   "groupRef": "g-shop-instant",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-osulloc",
+   "code": "osulloc",
+   "article": null,
+   "title": "Osulloc, 10 вкусов",
+   "groupRef": "g-shop-tea",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-sbcaramel",
+   "code": "sbcaramel",
+   "article": null,
+   "title": "Starbucks Caramel",
+   "groupRef": "g-shop-ground",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-ceylon",
+   "code": "ceylon",
+   "article": null,
+   "title": "Special Tea Selection",
+   "groupRef": "g-shop-tea",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-motif",
+   "code": "motif",
+   "article": null,
+   "title": "Сиропы Motif",
+   "groupRef": "g-shop-syrups",
+   "description": null,
+   "unit": "шт",
+   "characteristics": [
+    {
+     "ref": "ch-motif-1",
+     "title": "Шоколад"
+    },
+    {
+     "ref": "ch-motif-2",
+     "title": "Корица-бабка"
+    },
+    {
+     "ref": "ch-motif-3",
+     "title": "Фисташка"
+    },
+    {
+     "ref": "ch-motif-4",
+     "title": "Ваниль"
+    }
+   ]
+  },
+  {
+   "ref": "it-island",
+   "code": "island",
+   "article": null,
+   "title": "Drip Coffee, Island",
+   "groupRef": "g-shop-drip",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-sbmocha",
+   "code": "sbmocha",
+   "article": null,
+   "title": "Starbucks Mocha",
+   "groupRef": "g-shop-ground",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-lam",
+   "code": "lam",
+   "article": null,
+   "title": "Сиропы lam",
+   "groupRef": "g-shop-syrups",
+   "description": null,
+   "unit": "шт",
+   "characteristics": [
+    {
+     "ref": "ch-lam-1",
+     "title": "Каштан с пралине"
+    },
+    {
+     "ref": "ch-lam-2",
+     "title": "Ваниль"
+    },
+    {
+     "ref": "ch-lam-3",
+     "title": "Тесто для печенья"
+    }
+   ]
+  },
+  {
+   "ref": "it-hugging",
+   "code": "hugging",
+   "article": null,
+   "title": "Hugging Drip, ассорти",
+   "groupRef": "g-shop-drip",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-pukka",
+   "code": "pukka",
+   "article": null,
+   "title": "Pukka Organic Selection",
+   "groupRef": "g-shop-tea",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-barinoff",
+   "code": "barinoff",
+   "article": null,
+   "title": "Сиропы Barinoff",
+   "groupRef": "g-shop-syrups",
+   "description": null,
+   "unit": "шт",
+   "characteristics": [
+    {
+     "ref": "ch-barinoff-1",
+     "title": "Вишня"
+    },
+    {
+     "ref": "ch-barinoff-2",
+     "title": "Лесные ягоды"
+    },
+    {
+     "ref": "ch-barinoff-3",
+     "title": "Лесной орех"
+    },
+    {
+     "ref": "ch-barinoff-4",
+     "title": "Мята"
+    },
+    {
+     "ref": "ch-barinoff-5",
+     "title": "Зелёное яблоко"
+    },
+    {
+     "ref": "ch-barinoff-6",
+     "title": "Карамель"
+    },
+    {
+     "ref": "ch-barinoff-7",
+     "title": "Арбуз"
+    },
+    {
+     "ref": "ch-barinoff-8",
+     "title": "Малина"
+    },
+    {
+     "ref": "ch-barinoff-9",
+     "title": "Мохито"
+    },
+    {
+     "ref": "ch-barinoff-10",
+     "title": "Лайм"
+    },
+    {
+     "ref": "ch-barinoff-11",
+     "title": "Клубника"
+    },
+    {
+     "ref": "ch-barinoff-12",
+     "title": "Ваниль"
+    }
+   ]
+  },
+  {
+   "ref": "it-monin",
+   "code": "monin",
+   "article": null,
+   "title": "Сиропы Monin",
+   "groupRef": "g-shop-syrups",
+   "description": null,
+   "unit": "шт",
+   "characteristics": [
+    {
+     "ref": "ch-monin-1",
+     "title": "Манго"
+    },
+    {
+     "ref": "ch-monin-2",
+     "title": "Миндаль (оршад)"
+    },
+    {
+     "ref": "ch-monin-3",
+     "title": "Трипл сек кюрасао"
+    },
+    {
+     "ref": "ch-monin-4",
+     "title": "Карибский ром"
+    },
+    {
+     "ref": "ch-monin-5",
+     "title": "Пина колада"
+    },
+    {
+     "ref": "ch-monin-6",
+     "title": "Клубника"
+    },
+    {
+     "ref": "ch-monin-7",
+     "title": "Ваниль"
+    },
+    {
+     "ref": "ch-monin-8",
+     "title": "Карамель"
+    },
+    {
+     "ref": "ch-monin-9",
+     "title": "Лесной орех"
+    },
+    {
+     "ref": "ch-monin-10",
+     "title": "Шоколад"
+    },
+    {
+     "ref": "ch-monin-11",
+     "title": "Мята"
+    },
+    {
+     "ref": "ch-monin-12",
+     "title": "Кокос"
+    }
+   ]
+  },
+  {
+   "ref": "it-lavbarista",
+   "code": "lavbarista",
+   "article": null,
+   "title": "Lavazza Barista Perfetto",
+   "groupRef": "g-shop-beans",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-tastyespresso",
+   "code": "tastyespresso",
+   "article": null,
+   "title": "Tasty Coffee Espresso",
+   "groupRef": "g-shop-beans",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-routin",
+   "code": "routin",
+   "article": null,
+   "title": "Сиропы 1883 Routin",
+   "groupRef": "g-shop-syrups",
+   "description": null,
+   "unit": "шт",
+   "characteristics": [
+    {
+     "ref": "ch-routin-1",
+     "title": "Карамель"
+    },
+    {
+     "ref": "ch-routin-2",
+     "title": "Ваниль"
+    },
+    {
+     "ref": "ch-routin-3",
+     "title": "Малина"
+    }
+   ]
+  },
+  {
+   "ref": "it-lavoro",
+   "code": "lavoro",
+   "article": null,
+   "title": "Lavazza Qualità Oro",
+   "groupRef": "g-shop-beans",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-maccoffee",
+   "code": "maccoffee",
+   "article": null,
+   "title": "MacCoffee Original 3 в 1",
+   "groupRef": "g-shop-instant",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-menu-classic-01",
+   "code": "MENU-CLASSIC-01",
+   "article": null,
+   "title": "Капучино",
+   "groupRef": "g-menu-classic",
+   "description": null,
+   "unit": "шт",
+   "characteristics": [
+    {
+     "ref": "ch-menu-classic-01-1",
+     "title": "250 мл"
+    },
+    {
+     "ref": "ch-menu-classic-01-2",
+     "title": "350 мл"
+    }
+   ]
+  },
+  {
+   "ref": "it-menu-classic-02",
+   "code": "MENU-CLASSIC-02",
+   "article": null,
+   "title": "Латте",
+   "groupRef": "g-menu-classic",
+   "description": null,
+   "unit": "шт",
+   "characteristics": [
+    {
+     "ref": "ch-menu-classic-02-1",
+     "title": "350 мл"
+    }
+   ]
+  },
+  {
+   "ref": "it-menu-classic-03",
+   "code": "MENU-CLASSIC-03",
+   "article": null,
+   "title": "Раф",
+   "groupRef": "g-menu-classic",
+   "description": null,
+   "unit": "шт",
+   "characteristics": [
+    {
+     "ref": "ch-menu-classic-03-1",
+     "title": "350 мл"
+    }
+   ]
+  },
+  {
+   "ref": "it-menu-classic-04",
+   "code": "MENU-CLASSIC-04",
+   "article": null,
+   "title": "Флэт уайт",
+   "groupRef": "g-menu-classic",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-menu-classic-05",
+   "code": "MENU-CLASSIC-05",
+   "article": null,
+   "title": "Эспрессо",
+   "groupRef": "g-menu-classic",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-menu-classic-06",
+   "code": "MENU-CLASSIC-06",
+   "article": null,
+   "title": "Двойной эспрессо",
+   "groupRef": "g-menu-classic",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-menu-classic-07",
+   "code": "MENU-CLASSIC-07",
+   "article": null,
+   "title": "Американо",
+   "groupRef": "g-menu-classic",
+   "description": null,
+   "unit": "шт",
+   "characteristics": [
+    {
+     "ref": "ch-menu-classic-07-1",
+     "title": "250 мл"
+    },
+    {
+     "ref": "ch-menu-classic-07-2",
+     "title": "350 мл"
+    }
+   ]
+  },
+  {
+   "ref": "it-menu-classic-08",
+   "code": "MENU-CLASSIC-08",
+   "article": null,
+   "title": "Фильтр",
+   "groupRef": "g-menu-classic",
+   "description": null,
+   "unit": "шт",
+   "characteristics": [
+    {
+     "ref": "ch-menu-classic-08-1",
+     "title": "350 мл"
+    }
+   ]
+  },
+  {
+   "ref": "it-menu-classic-09",
+   "code": "MENU-CLASSIC-09",
+   "article": null,
+   "title": "Мокачино",
+   "groupRef": "g-menu-classic",
+   "description": null,
+   "unit": "шт",
+   "characteristics": [
+    {
+     "ref": "ch-menu-classic-09-1",
+     "title": "250 мл"
+    },
+    {
+     "ref": "ch-menu-classic-09-2",
+     "title": "350 мл"
+    }
+   ]
+  },
+  {
+   "ref": "it-menu-classic-10",
+   "code": "MENU-CLASSIC-10",
+   "article": null,
+   "title": "Какао",
+   "groupRef": "g-menu-classic",
+   "description": null,
+   "unit": "шт",
+   "characteristics": [
+    {
+     "ref": "ch-menu-classic-10-1",
+     "title": "350 мл"
+    }
+   ]
+  },
+  {
+   "ref": "it-menu-classic-11",
+   "code": "MENU-CLASSIC-11",
+   "article": null,
+   "title": "Горячий шоколад",
+   "groupRef": "g-menu-classic",
+   "description": null,
+   "unit": "шт",
+   "characteristics": [
+    {
+     "ref": "ch-menu-classic-11-1",
+     "title": "350 мл"
+    }
+   ]
+  },
+  {
+   "ref": "it-menu-classic-12",
+   "code": "MENU-CLASSIC-12",
+   "article": null,
+   "title": "Горячий шоколад без сахара",
+   "groupRef": "g-menu-classic",
+   "description": null,
+   "unit": "шт",
+   "characteristics": [
+    {
+     "ref": "ch-menu-classic-12-1",
+     "title": "350 мл"
+    }
+   ]
+  },
+  {
+   "ref": "it-menu-classic-13",
+   "code": "MENU-CLASSIC-13",
+   "article": null,
+   "title": "Матча латте",
+   "groupRef": "g-menu-classic",
+   "description": null,
+   "unit": "шт",
+   "characteristics": [
+    {
+     "ref": "ch-menu-classic-13-1",
+     "title": "350 мл"
+    }
+   ]
+  },
+  {
+   "ref": "it-menu-author-01",
+   "code": "MENU-AUTHOR-01",
+   "article": null,
+   "title": "Лавандовый раф",
+   "groupRef": "g-menu-author",
+   "description": null,
+   "unit": "шт",
+   "characteristics": [
+    {
+     "ref": "ch-menu-author-01-1",
+     "title": "350 мл"
+    }
+   ]
+  },
+  {
+   "ref": "it-menu-author-02",
+   "code": "MENU-AUTHOR-02",
+   "article": null,
+   "title": "Раф Рафаэлло",
+   "groupRef": "g-menu-author",
+   "description": null,
+   "unit": "шт",
+   "characteristics": [
+    {
+     "ref": "ch-menu-author-02-1",
+     "title": "350 мл"
+    }
+   ]
+  },
+  {
+   "ref": "it-menu-author-03",
+   "code": "MENU-AUTHOR-03",
+   "article": null,
+   "title": "Арахисовый раф",
+   "groupRef": "g-menu-author",
+   "description": null,
+   "unit": "шт",
+   "characteristics": [
+    {
+     "ref": "ch-menu-author-03-1",
+     "title": "350 мл"
+    }
+   ]
+  },
+  {
+   "ref": "it-menu-author-04",
+   "code": "MENU-AUTHOR-04",
+   "article": null,
+   "title": "Маскарпоне Cream",
+   "groupRef": "g-menu-author",
+   "description": null,
+   "unit": "шт",
+   "characteristics": [
+    {
+     "ref": "ch-menu-author-04-1",
+     "title": "350 мл"
+    }
+   ]
+  },
+  {
+   "ref": "it-menu-author-05",
+   "code": "MENU-AUTHOR-05",
+   "article": null,
+   "title": "Капучино бельгийская вафля",
+   "groupRef": "g-menu-author",
+   "description": null,
+   "unit": "шт",
+   "characteristics": [
+    {
+     "ref": "ch-menu-author-05-1",
+     "title": "350 мл"
+    }
+   ]
+  },
+  {
+   "ref": "it-menu-author-06",
+   "code": "MENU-AUTHOR-06",
+   "article": null,
+   "title": "Цитрусовый американо",
+   "groupRef": "g-menu-author",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-menu-cold-01",
+   "code": "MENU-COLD-01",
+   "article": null,
+   "title": "Матча латте",
+   "groupRef": "g-menu-cold",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-menu-cold-02",
+   "code": "MENU-COLD-02",
+   "article": null,
+   "title": "Айс латте",
+   "groupRef": "g-menu-cold",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-menu-cold-03",
+   "code": "MENU-COLD-03",
+   "article": null,
+   "title": "Фраппе",
+   "groupRef": "g-menu-cold",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-menu-cold-04",
+   "code": "MENU-COLD-04",
+   "article": null,
+   "title": "Фраппучино шоколад",
+   "groupRef": "g-menu-cold",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-menu-cold-05",
+   "code": "MENU-COLD-05",
+   "article": null,
+   "title": "Фраппучино вишня",
+   "groupRef": "g-menu-cold",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-menu-cold-06",
+   "code": "MENU-COLD-06",
+   "article": null,
+   "title": "Бамбл",
+   "groupRef": "g-menu-cold",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-menu-cold-07",
+   "code": "MENU-COLD-07",
+   "article": null,
+   "title": "Банана айс",
+   "groupRef": "g-menu-cold",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-menu-cold-08",
+   "code": "MENU-COLD-08",
+   "article": null,
+   "title": "Колд брю",
+   "groupRef": "g-menu-cold",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-menu-cold-09",
+   "code": "MENU-COLD-09",
+   "article": null,
+   "title": "Классический глясse",
+   "groupRef": "g-menu-cold",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-menu-cold-10",
+   "code": "MENU-COLD-10",
+   "article": null,
+   "title": "Фирменный глясse",
+   "groupRef": "g-menu-cold",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-menu-tea-01",
+   "code": "MENU-TEA-01",
+   "article": null,
+   "title": "Облепиха, имбирь",
+   "groupRef": "g-menu-tea",
+   "description": null,
+   "unit": "шт",
+   "characteristics": [
+    {
+     "ref": "ch-menu-tea-01-1",
+     "title": "350 мл"
+    }
+   ]
+  },
+  {
+   "ref": "it-menu-tea-02",
+   "code": "MENU-TEA-02",
+   "article": null,
+   "title": "Малина",
+   "groupRef": "g-menu-tea",
+   "description": null,
+   "unit": "шт",
+   "characteristics": [
+    {
+     "ref": "ch-menu-tea-02-1",
+     "title": "350 мл"
+    }
+   ]
+  },
+  {
+   "ref": "it-menu-tea-03",
+   "code": "MENU-TEA-03",
+   "article": null,
+   "title": "Фейхоа, еловые иголки",
+   "groupRef": "g-menu-tea",
+   "description": null,
+   "unit": "шт",
+   "characteristics": [
+    {
+     "ref": "ch-menu-tea-03-1",
+     "title": "350 мл"
+    }
+   ]
+  },
+  {
+   "ref": "it-menu-tea-04",
+   "code": "MENU-TEA-04",
+   "article": null,
+   "title": "Хвойный чай",
+   "groupRef": "g-menu-tea",
+   "description": null,
+   "unit": "шт",
+   "characteristics": [
+    {
+     "ref": "ch-menu-tea-04-1",
+     "title": "350 мл"
+    }
+   ]
+  },
+  {
+   "ref": "it-menu-tea-05",
+   "code": "MENU-TEA-05",
+   "article": null,
+   "title": "Масала",
+   "groupRef": "g-menu-tea",
+   "description": null,
+   "unit": "шт",
+   "characteristics": [
+    {
+     "ref": "ch-menu-tea-05-1",
+     "title": "350 мл"
+    }
+   ]
+  },
+  {
+   "ref": "it-menu-tea-06",
+   "code": "MENU-TEA-06",
+   "article": null,
+   "title": "Конструктор",
+   "groupRef": "g-menu-tea",
+   "description": null,
+   "unit": "шт",
+   "characteristics": [
+    {
+     "ref": "ch-menu-tea-06-1",
+     "title": "350 мл"
+    }
+   ]
+  },
+  {
+   "ref": "it-menu-tea-07",
+   "code": "MENU-TEA-07",
+   "article": null,
+   "title": "Холодный чай",
+   "groupRef": "g-menu-tea",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-menu-lemonade-01",
+   "code": "MENU-LEMONADE-01",
+   "article": null,
+   "title": "Голубое небо",
+   "groupRef": "g-menu-lemonade",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-menu-lemonade-02",
+   "code": "MENU-LEMONADE-02",
+   "article": null,
+   "title": "Малина, мята",
+   "groupRef": "g-menu-lemonade",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-menu-lemonade-03",
+   "code": "MENU-LEMONADE-03",
+   "article": null,
+   "title": "Виноград",
+   "groupRef": "g-menu-lemonade",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-menu-lemonade-04",
+   "code": "MENU-LEMONADE-04",
+   "article": null,
+   "title": "Мохито",
+   "groupRef": "g-menu-lemonade",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-menu-lemonade-05",
+   "code": "MENU-LEMONADE-05",
+   "article": null,
+   "title": "Тропический мохито",
+   "groupRef": "g-menu-lemonade",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-add-sugar",
+   "code": "ADD-SUGAR",
+   "article": null,
+   "title": "Сахар",
+   "groupRef": "g-menu-addons",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-add-cinnamon",
+   "code": "ADD-CINNAMON",
+   "article": null,
+   "title": "Корица",
+   "groupRef": "g-menu-addons",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-add-shot",
+   "code": "ADD-SHOT",
+   "article": null,
+   "title": "Шот эспрессо или матча",
+   "groupRef": "g-menu-addons",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-add-syrup",
+   "code": "ADD-SYRUP",
+   "article": null,
+   "title": "Сироп",
+   "groupRef": "g-menu-addons",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-add-topping",
+   "code": "ADD-TOPPING",
+   "article": null,
+   "title": "Топпинг",
+   "groupRef": "g-menu-addons",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-add-honey",
+   "code": "ADD-HONEY",
+   "article": null,
+   "title": "Мёд",
+   "groupRef": "g-menu-addons",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-add-marsh",
+   "code": "ADD-MARSH",
+   "article": null,
+   "title": "Маршмеллоу",
+   "groupRef": "g-menu-addons",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-add-lemon",
+   "code": "ADD-LEMON",
+   "article": null,
+   "title": "Лимон",
+   "groupRef": "g-menu-addons",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  },
+  {
+   "ref": "it-add-milk",
+   "code": "ADD-MILK",
+   "article": null,
+   "title": "Альтернативное молоко",
+   "groupRef": "g-menu-addons",
+   "description": null,
+   "unit": "шт",
+   "characteristics": [
+    {
+     "ref": "ch-add-milk-250",
+     "title": "250 мл"
+    },
+    {
+     "ref": "ch-add-milk-350",
+     "title": "350 мл"
+    },
+    {
+     "ref": "ch-add-milk-450",
+     "title": "450 мл"
+    }
+   ]
+  },
+  {
+   "ref": "it-add-icecream",
+   "code": "ADD-ICECREAM",
+   "article": null,
+   "title": "Шарик мороженого",
+   "groupRef": "g-menu-addons",
+   "description": null,
+   "unit": "шт",
+   "characteristics": []
+  }
+ ],
+ "prices": [
+  {
+   "itemRef": "it-lavazza",
+   "charRef": null,
+   "price": 690.0
+  },
+  {
+   "itemRef": "it-tasty",
+   "charRef": null,
+   "price": 640.0
+  },
+  {
+   "itemRef": "it-lavrossa",
+   "charRef": null,
+   "price": 590.0
+  },
+  {
+   "itemRef": "it-sbmix",
+   "charRef": null,
+   "price": 790.0
+  },
+  {
+   "itemRef": "it-osulloc",
+   "charRef": null,
+   "price": 2790.0
+  },
+  {
+   "itemRef": "it-sbcaramel",
+   "charRef": null,
+   "price": 1650.0
+  },
+  {
+   "itemRef": "it-ceylon",
+   "charRef": null,
+   "price": 1190.0
+  },
+  {
+   "itemRef": "it-motif",
+   "charRef": null,
+   "price": 1490.0
+  },
+  {
+   "itemRef": "it-island",
+   "charRef": null,
+   "price": 890.0
+  },
+  {
+   "itemRef": "it-sbmocha",
+   "charRef": null,
+   "price": 1650.0
+  },
+  {
+   "itemRef": "it-lam",
+   "charRef": null,
+   "price": 2190.0
+  },
+  {
+   "itemRef": "it-hugging",
+   "charRef": null,
+   "price": 1290.0
+  },
+  {
+   "itemRef": "it-pukka",
+   "charRef": null,
+   "price": 2990.0
+  },
+  {
+   "itemRef": "it-barinoff",
+   "charRef": null,
+   "price": 590.0
+  },
+  {
+   "itemRef": "it-monin",
+   "charRef": null,
+   "price": 1090.0
+  },
+  {
+   "itemRef": "it-lavbarista",
+   "charRef": null,
+   "price": 2890.0
+  },
+  {
+   "itemRef": "it-tastyespresso",
+   "charRef": null,
+   "price": 2590.0
+  },
+  {
+   "itemRef": "it-routin",
+   "charRef": null,
+   "price": 1190.0
+  },
+  {
+   "itemRef": "it-lavoro",
+   "charRef": null,
+   "price": 790.0
+  },
+  {
+   "itemRef": "it-maccoffee",
+   "charRef": null,
+   "price": 26.0
+  },
+  {
+   "itemRef": "it-menu-classic-01",
+   "charRef": "ch-menu-classic-01-1",
+   "price": 170
+  },
+  {
+   "itemRef": "it-menu-classic-01",
+   "charRef": "ch-menu-classic-01-2",
+   "price": 200
+  },
+  {
+   "itemRef": "it-menu-classic-02",
+   "charRef": "ch-menu-classic-02-1",
+   "price": 220
+  },
+  {
+   "itemRef": "it-menu-classic-03",
+   "charRef": "ch-menu-classic-03-1",
+   "price": 255
+  },
+  {
+   "itemRef": "it-menu-classic-07",
+   "charRef": "ch-menu-classic-07-1",
+   "price": 140
+  },
+  {
+   "itemRef": "it-menu-classic-07",
+   "charRef": "ch-menu-classic-07-2",
+   "price": 160
+  },
+  {
+   "itemRef": "it-menu-classic-08",
+   "charRef": "ch-menu-classic-08-1",
+   "price": 240
+  },
+  {
+   "itemRef": "it-menu-classic-09",
+   "charRef": "ch-menu-classic-09-1",
+   "price": 140
+  },
+  {
+   "itemRef": "it-menu-classic-09",
+   "charRef": "ch-menu-classic-09-2",
+   "price": 160
+  },
+  {
+   "itemRef": "it-menu-classic-10",
+   "charRef": "ch-menu-classic-10-1",
+   "price": 190
+  },
+  {
+   "itemRef": "it-menu-classic-11",
+   "charRef": "ch-menu-classic-11-1",
+   "price": 210
+  },
+  {
+   "itemRef": "it-menu-classic-12",
+   "charRef": "ch-menu-classic-12-1",
+   "price": 190
+  },
+  {
+   "itemRef": "it-menu-classic-13",
+   "charRef": "ch-menu-classic-13-1",
+   "price": 240
+  },
+  {
+   "itemRef": "it-menu-author-01",
+   "charRef": "ch-menu-author-01-1",
+   "price": 280
+  },
+  {
+   "itemRef": "it-menu-author-02",
+   "charRef": "ch-menu-author-02-1",
+   "price": 280
+  },
+  {
+   "itemRef": "it-menu-author-03",
+   "charRef": "ch-menu-author-03-1",
+   "price": 280
+  },
+  {
+   "itemRef": "it-menu-author-04",
+   "charRef": "ch-menu-author-04-1",
+   "price": 280
+  },
+  {
+   "itemRef": "it-menu-author-05",
+   "charRef": "ch-menu-author-05-1",
+   "price": 240
+  },
+  {
+   "itemRef": "it-menu-tea-01",
+   "charRef": "ch-menu-tea-01-1",
+   "price": 190
+  },
+  {
+   "itemRef": "it-menu-tea-02",
+   "charRef": "ch-menu-tea-02-1",
+   "price": 190
+  },
+  {
+   "itemRef": "it-menu-tea-03",
+   "charRef": "ch-menu-tea-03-1",
+   "price": 190
+  },
+  {
+   "itemRef": "it-menu-tea-04",
+   "charRef": "ch-menu-tea-04-1",
+   "price": 190
+  },
+  {
+   "itemRef": "it-menu-tea-05",
+   "charRef": "ch-menu-tea-05-1",
+   "price": 190
+  },
+  {
+   "itemRef": "it-menu-tea-06",
+   "charRef": "ch-menu-tea-06-1",
+   "price": 190
+  },
+  {
+   "itemRef": "it-add-sugar",
+   "charRef": null,
+   "price": 0
+  },
+  {
+   "itemRef": "it-add-cinnamon",
+   "charRef": null,
+   "price": 0
+  },
+  {
+   "itemRef": "it-add-shot",
+   "charRef": null,
+   "price": 60
+  },
+  {
+   "itemRef": "it-add-syrup",
+   "charRef": null,
+   "price": 25
+  },
+  {
+   "itemRef": "it-add-topping",
+   "charRef": null,
+   "price": 35
+  },
+  {
+   "itemRef": "it-add-honey",
+   "charRef": null,
+   "price": 35
+  },
+  {
+   "itemRef": "it-add-marsh",
+   "charRef": null,
+   "price": 35
+  },
+  {
+   "itemRef": "it-add-lemon",
+   "charRef": null,
+   "price": 10
+  },
+  {
+   "itemRef": "it-add-milk",
+   "charRef": "ch-add-milk-250",
+   "price": 60
+  },
+  {
+   "itemRef": "it-add-milk",
+   "charRef": "ch-add-milk-350",
+   "price": 90
+  },
+  {
+   "itemRef": "it-add-milk",
+   "charRef": "ch-add-milk-450",
+   "price": 120
+  },
+  {
+   "itemRef": "it-add-icecream",
+   "charRef": null,
+   "price": 60
+  }
+ ],
+ "stock": [
+  {
+   "itemRef": "it-lavazza",
+   "charRef": null,
+   "qty": 12
+  },
+  {
+   "itemRef": "it-tasty",
+   "charRef": null,
+   "qty": 12
+  },
+  {
+   "itemRef": "it-lavrossa",
+   "charRef": null,
+   "qty": 12
+  },
+  {
+   "itemRef": "it-sbmix",
+   "charRef": null,
+   "qty": 12
+  },
+  {
+   "itemRef": "it-osulloc",
+   "charRef": null,
+   "qty": 12
+  },
+  {
+   "itemRef": "it-sbcaramel",
+   "charRef": null,
+   "qty": 12
+  },
+  {
+   "itemRef": "it-ceylon",
+   "charRef": null,
+   "qty": 12
+  },
+  {
+   "itemRef": "it-motif",
+   "charRef": "ch-motif-1",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-motif",
+   "charRef": "ch-motif-2",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-motif",
+   "charRef": "ch-motif-3",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-motif",
+   "charRef": "ch-motif-4",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-island",
+   "charRef": null,
+   "qty": 12
+  },
+  {
+   "itemRef": "it-sbmocha",
+   "charRef": null,
+   "qty": 12
+  },
+  {
+   "itemRef": "it-lam",
+   "charRef": "ch-lam-1",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-lam",
+   "charRef": "ch-lam-2",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-lam",
+   "charRef": "ch-lam-3",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-hugging",
+   "charRef": null,
+   "qty": 12
+  },
+  {
+   "itemRef": "it-pukka",
+   "charRef": null,
+   "qty": 12
+  },
+  {
+   "itemRef": "it-barinoff",
+   "charRef": "ch-barinoff-1",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-barinoff",
+   "charRef": "ch-barinoff-2",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-barinoff",
+   "charRef": "ch-barinoff-3",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-barinoff",
+   "charRef": "ch-barinoff-4",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-barinoff",
+   "charRef": "ch-barinoff-5",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-barinoff",
+   "charRef": "ch-barinoff-6",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-barinoff",
+   "charRef": "ch-barinoff-7",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-barinoff",
+   "charRef": "ch-barinoff-8",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-barinoff",
+   "charRef": "ch-barinoff-9",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-barinoff",
+   "charRef": "ch-barinoff-10",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-barinoff",
+   "charRef": "ch-barinoff-11",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-barinoff",
+   "charRef": "ch-barinoff-12",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-monin",
+   "charRef": "ch-monin-1",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-monin",
+   "charRef": "ch-monin-2",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-monin",
+   "charRef": "ch-monin-3",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-monin",
+   "charRef": "ch-monin-4",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-monin",
+   "charRef": "ch-monin-5",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-monin",
+   "charRef": "ch-monin-6",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-monin",
+   "charRef": "ch-monin-7",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-monin",
+   "charRef": "ch-monin-8",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-monin",
+   "charRef": "ch-monin-9",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-monin",
+   "charRef": "ch-monin-10",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-monin",
+   "charRef": "ch-monin-11",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-monin",
+   "charRef": "ch-monin-12",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-lavbarista",
+   "charRef": null,
+   "qty": 12
+  },
+  {
+   "itemRef": "it-tastyespresso",
+   "charRef": null,
+   "qty": 12
+  },
+  {
+   "itemRef": "it-routin",
+   "charRef": "ch-routin-1",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-routin",
+   "charRef": "ch-routin-2",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-routin",
+   "charRef": "ch-routin-3",
+   "qty": 8
+  },
+  {
+   "itemRef": "it-lavoro",
+   "charRef": null,
+   "qty": 12
+  },
+  {
+   "itemRef": "it-maccoffee",
+   "charRef": null,
+   "qty": 12
+  }
+ ]
+}
