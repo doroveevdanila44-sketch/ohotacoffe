@@ -14,7 +14,7 @@ export const openUrl = (url: string) => {
     window.location.href = url;
     return;
   }
-  void Browser.open({ url, presentationStyle: 'popover', toolbarColor: '#7b4fd6' });
+  void Browser.open({ url, presentationStyle: 'popover', toolbarColor: '#7a2cf5' });
 };
 
 export const telHref = (phone: string) => `tel:${phone.replace(/[^\d+]/g, '')}`;

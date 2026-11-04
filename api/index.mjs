@@ -76182,7 +76182,7 @@ var FcmPush = class {
           notification: { title: msg.title, body: msg.body },
           data: msg.data ?? {},
           apns: { payload: { aps: { sound: "default" } } },
-          android: { priority: "high", notification: { color: "#7b4fd6" } }
+          android: { priority: "high", notification: { color: "#7a2cf5" } }
         }
       })
     });
@@ -76490,7 +76490,7 @@ var page = (title, body, head = "") => `<!doctype html>
 <html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>${esc2(title)}</title>${head}
 <style>body{font:16px/1.55 -apple-system,system-ui,sans-serif;max-width:720px;margin:0 auto;padding:24px 20px 60px;color:#1d3308}
-h1{font-size:24px;color:#7b4fd6}h2{font-size:18px;margin-top:28px}a{color:#7b4fd6}.btn{display:inline-block;background:#8bcb45;color:#1d3308;padding:14px 22px;border-radius:14px;text-decoration:none;font-weight:700}</style>
+h1{font-size:24px;color:#7a2cf5}h2{font-size:18px;margin-top:28px}a{color:#7b4fd6}.btn{display:inline-block;background:#c1e503;color:#1d3308;padding:14px 22px;border-radius:14px;text-decoration:none;font-weight:700}</style>
 </head><body>${body}</body></html>`;
 function privacyHtml(cfg) {
   const op = esc2(cfg.LEGAL_OPERATOR);

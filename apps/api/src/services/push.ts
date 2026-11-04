@@ -53,7 +53,7 @@ export class FcmPush implements PushSender {
           notification: { title: msg.title, body: msg.body },
           data: msg.data ?? {},
           apns: { payload: { aps: { sound: 'default' } } },
-          android: { priority: 'high', notification: { color: '#7b4fd6' } },
+          android: { priority: 'high', notification: { color: '#7a2cf5' } },
         },
       }),
     });

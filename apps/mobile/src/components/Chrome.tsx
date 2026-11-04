@@ -88,8 +88,8 @@ export function OfflineBadge() {
   return off ? <div className="offline">Нет интернета</div> : null;
 }
 
-const GREEN = '#8bcb45';
-const VIOLET = '#7b4fd6';
+const GREEN = '#c1e503';
+const VIOLET = '#7a2cf5';
 const GREY = '#f3f3f5';
 
 /**
