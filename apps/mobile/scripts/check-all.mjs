@@ -28,7 +28,7 @@ const wait = async (url) => { for (let i = 0; i < 60; i++) { try { if ((await fe
 let failed = false;
 try {
   await wait(env.API_URL + '/health'); await wait(env.WEB_URL + '/');
-  for (const check of ['layout-check', 'bottom-check', 'coffee-hero-check', 'product-card-check']) {
+  for (const check of ['layout-check', 'bottom-check', 'coffee-hero-check', 'product-card-check', 'no-bounce-check']) {
     console.log(`\n=== ${check} ===`);
     if (run('node', [`apps/mobile/scripts/${check}.mjs`]).status !== 0) { failed = true; console.log(`ПРОВАЛ: ${check}`); }
   }

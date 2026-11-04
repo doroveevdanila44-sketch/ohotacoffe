@@ -20,7 +20,7 @@ button{font:inherit;color:inherit;border:0;background:none;padding:0;cursor:poin
 }
 
 /* screens */
-.screen{position:absolute;inset:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:none;visibility:hidden;opacity:0;transition:opacity .25s}
+.screen{position:absolute;inset:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:none;scrollbar-width:none;visibility:hidden;opacity:0;transition:opacity .25s}
 .screen::-webkit-scrollbar{display:none}
 .screen.active{visibility:visible;opacity:1}
 
@@ -184,7 +184,7 @@ button{font:inherit;color:inherit;border:0;background:none;padding:0;cursor:poin
 .btn{height:42px;padding:0 16px;border-radius:21px;background:#1d1b20;color:#fff;font-size:14px;font-weight:600}
 
 /* brand sheet */
-.brand{position:absolute;inset:0;z-index:12;background:var(--bg);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none;transform:translateX(100%);visibility:hidden;transition:transform .38s cubic-bezier(.2,.8,.2,1),visibility 0s .38s}
+.brand{position:absolute;inset:0;z-index:12;background:var(--bg);overflow-y:auto;overscroll-behavior:none;scrollbar-width:none;transform:translateX(100%);visibility:hidden;transition:transform .38s cubic-bezier(.2,.8,.2,1),visibility 0s .38s}
 .brand::-webkit-scrollbar{display:none}
 .brand.open{transform:none;visibility:visible;transition-delay:0s}
 .bw{padding:calc(var(--sat) + 16px) 16px 150px}
@@ -772,3 +772,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 /* Карточка товара: фото целиком, подстраивается под свои пропорции */
 .bimg{background:none}
 .bimg img{width:100%;height:auto;aspect-ratio:auto;max-height:68dvh;object-fit:contain;background:#e7e4ea}
+
+/* Верх зафиксирован: никаких пружинящих сдвигов */
+html,body,#root,.app{overscroll-behavior:none}
+.sheet,.dlg{overscroll-behavior:none}

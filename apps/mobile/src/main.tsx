@@ -5,6 +5,7 @@ import { App } from './App';
 import { hydrateCache, queryClient } from './lib/queries';
 import { initViewportHeight } from './lib/viewport';
 import { preloadCups } from './lib/preload';
+import { initNoBounce } from './lib/noBounce';
 import { initNative } from './native';
 import { useCart } from './store/cart';
 import { useSession } from './store/session';
@@ -14,6 +15,7 @@ import './styles.css';
 async function boot() {
   initViewportHeight();
   preloadCups();
+  initNoBounce();
   // Сначала поднимаем сохранённые данные: сессию, корзину и последний каталог.
   await Promise.all([useSession.persist.rehydrate(), useCart.persist.rehydrate(), hydrateCache()]);
   await initNative();

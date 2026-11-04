@@ -9,6 +9,7 @@ const config: CapacitorConfig = {
     contentInset: 'never',
     scheme: 'Охота кофе',
     preferredContentMode: 'mobile',
+    scrollEnabled: false,
   },
   android: {
     allowMixedContent: false,
