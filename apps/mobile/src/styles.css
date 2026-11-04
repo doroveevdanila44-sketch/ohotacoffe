@@ -776,3 +776,14 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 /* Верх зафиксирован: никаких пружинящих сдвигов */
 html,body,#root,.app{overscroll-behavior:none}
 .sheet,.dlg{overscroll-behavior:none}
+
+/* Верх экрана: цвет экрана наверху, при прокрутке прозрачный с мягким размытием, как в Telegram */
+.sysbar{background:none!important;overflow:visible}
+.sysbar i{position:absolute;left:0;right:0;top:0;bottom:0;display:block;pointer-events:none}
+.sysbar .sb-c{background:var(--sb);opacity:1}
+.sysbar .sb-g{bottom:-14px;background:linear-gradient(to bottom,color-mix(in srgb,var(--sb) 55%,transparent),transparent);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  -webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent);mask-image:linear-gradient(to bottom,#000 55%,transparent);opacity:0}
+.sysbar.anim .sb-c,.sysbar.anim .sb-g{transition:opacity .14s linear}
+.sysbar.moved .sb-c{opacity:0}
+.sysbar.moved .sb-g{opacity:1}

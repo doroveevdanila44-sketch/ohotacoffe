@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { SystemBars, SystemBarsStyle, SystemBarType } from '@capacitor/core';
 import { Icon, type IconName } from './Icons';
 import { isNative } from '../lib/native';
@@ -102,15 +102,23 @@ export function SystemBar() {
   const splash = useUi((s) => s.splash);
   const key = `${tab}:${step}`;
   // «Шапка ушла за край» запоминается вместе с экраном, чтобы не тянуться с прошлого экрана.
-  const [scrolled, setScrolled] = useState({ key: '', over: false });
+  const [scrolled, setScrolled] = useState({ key: '', over: false, moved: false });
   const over = scrolled.key === key && scrolled.over;
+  // Как в Telegram: когда экран прокручен, верх становится прозрачным, а контент уходит под часы и остров.
+  const moved = scrolled.key === key && scrolled.moved;
+  const prevKey = useRef(key);
+  const animate = prevKey.current === key;
+  useEffect(() => {
+    prevKey.current = key;
+  });
 
   useLayoutEffect(() => {
     const check = (el: Element | null) => {
       const hero = el?.querySelector('.cfhero, .rhero');
       const bar = document.querySelector('.sysbar') as HTMLElement | null;
       const v = !!hero && !!bar && hero.getBoundingClientRect().bottom <= bar.offsetHeight + 1;
-      setScrolled((x) => (x.key === key && x.over === v ? x : { key, over: v }));
+      const m = (el as HTMLElement | null)?.scrollTop ? (el as HTMLElement).scrollTop > 2 : false;
+      setScrolled((x) => (x.key === key && x.over === v && x.moved === m ? x : { key, over: v, moved: m }));
     };
     const onScroll = (e: Event) => {
       const el = e.target as HTMLElement;
@@ -148,5 +156,10 @@ export function SystemBar() {
   }, [color, bottom]);
 
   // Цвет задаётся прямо в разметке: он меняется в том же кадре, что и экран под ним.
-  return <div className="sysbar" style={{ background: color }} aria-hidden="true" />;
+  return (
+    <div className={`sysbar${moved ? ' moved' : ''}${animate ? ' anim' : ''}`} style={{ ['--sb' as string]: color }} aria-hidden="true">
+      <i className="sb-c" />
+      <i className="sb-g" />
+    </div>
+  );
 }
